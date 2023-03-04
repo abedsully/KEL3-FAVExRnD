@@ -8,5 +8,6 @@
 </head>
 <body>
     Hello World
+    <button type="submit">Submit</button>
 </body>
 </html>

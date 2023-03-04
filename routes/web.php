@@ -22,3 +22,8 @@ Route::get('/landing-page', function () {
     return view('landing');
 });
 
+// Index Page
+Route::get('/index', function () {
+    return view('index');
+});
+
