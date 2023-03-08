@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div id="button">
-                <button>Log In</button>
+                <button>Login</button>
             </div>
 
             <div id="donthave">
