@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-image: url("/image/register/Template.png");
+    background-size: cover;
+    height: 100vh;
+}
+/* Logo */
+.logo .favebook{
+    position: absolute;
+    width: 186px;
+    left: 73px;
+    top: 54px;
+}
+
+/* Form */
+.form-wrapper{
+    position: absolute;
+    left: 380px;
+    top: 144px;
+    width: 680px;
+    height: 736px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+/* Register Heading */
+.title{
+    display: flex;
+    justify-content: center;
+    padding-top: 76px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    color: #0081C9;
+}
+.welcome{
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #707070;
+}
+/* Form */
+        /*FirstName LastName */
+.nama1{
+    margin: 12px 74px;
+}
+.nama1 label, .nama2 label, .email label, .psw label, .confirm-psw label{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    color: #0081C9;
+}
+.nama1 input , .nama2 input{
+    position: absolute;
+    width: 256px;
+    border: 2px solid #E3E3E3;
+    border-radius: 8px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 17px 60px 17px 7px;
+}
+.nama2{
+    position: absolute;
+    left: 350px;
+    top: 193px;
+}
+        /* Email */
+.email{
+    position: absolute;
+    margin: 12px 74px;
+    top: 281px;
+}
+.email input, .psw input, .confirm-psw input{
+    position: absolute;
+    width: 529px;
+    border: 2px solid #E3E3E3;
+    border-radius: 8px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 17px 135px 17px 14px;
+}
+        /* Password */
+.psw{
+    position: absolute;
+    margin: 12px 74px;
+    top: 384px;
+}
+.confirm-psw{
+    position: absolute;
+    margin: 12px 74px;
+    top: 491px;
+}
+        /* Visibility */
+.psw .visibility i{
+    position: absolute;
+    top: 44px;
+    left: 480px;
+}
+#hide1{
+    display: none;
+}
+.confirm-psw .visibility2 i{
+    position: absolute;
+    top: 44px;
+    left: 480px;
+}
+#hide3{
+    display: none;
+}
+        /* next button */
+.next{
+    display: flex;
+    position: absolute;
+    right: 75px;
+    bottom: 76px;
+}
+.next-sambit{
+    padding: 15px 40px;
+    font-style: normal;
+    background-color: #FFC93C;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+}
+/* Footer */
+footer{
+    position: absolute;
+    top: 776px;
+    width: 100%;
+    height: 248px;
+    background-image: url(/image/register/Footer.png);
+    background-size: cover;
+    z-index: -1;
+}
+footer p{
+    display: flex;
+    color: #FFFFFF;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 0;
+}

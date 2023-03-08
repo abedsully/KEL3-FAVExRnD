@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-image: url("/image/login/background.png");
+    background-size: cover;
+}
+
+#favebook{
+    padding:20px 0px 0px 30px;
+    width: 180px;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width: 650px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.25);
+    padding: 57px 64px 90px 64px;
+    margin: 104px 0px 0px 0px;
+}
+
+.center h1{
+    font-size: 40px;
+    color: #0081C9;
+    text-align: center;
+    margin: 0px 0px 6px 0px;
+}
+
+.center p{
+    text-align: center;
+    font-size: 14px;
+    color: #707070;
+    margin: 6px 0px 12px 0px;
+}
+
+.usernamepass{
+    display: flex;
+    flex-direction: column;
+}
+
+.usernamepass label{
+    color: #0081C9;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.usernamepass input{
+    border-radius: 8px;
+    padding: 10px;
+    margin: 6px 0px 10px 0px;
+    border: 2px solid #E3E3E3;
+    font-family: 'Poppins', sans-serif;
+}
+
+.content{
+    margin-top: 24px;
+    display: flex;
+    font-size: 14px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.rememberme{
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+    color: #707070;
+}
+
+.chxbox{
+    margin: 2px 2px 0px 0px;
+}
+
+.forgetpass a{
+    text-decoration: underline;
+    color: #5BC0F8;
+}
+
+#button{
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+}
+
+#button button{
+    background: #FFC93C;
+    border-radius: 8px;
+    text-align: center;
+    color: #11384D;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    width: 600px;
+    height: 53px;
+    border: none;
+    cursor: pointer;
+}
+
+#donthave{
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    font-family: 'Poppins';
+    text-align: center;
+    justify-content: center;
+}
+
+#donthave p{
+    color: #707070;
+}
+
+#donthave p a{
+    text-decoration: none;
+    color: #0081C9;
+    font-weight: 500;
+    padding: 6px 0px 0px 0px;
+}
