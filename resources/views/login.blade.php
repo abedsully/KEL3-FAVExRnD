@@ -17,8 +17,6 @@
         <a href="/"><img src="image/login/logo.png" id= favebook alt="favebook"></a>
     </div>
     <div class = "center">
-        <h1>Login</h1>
-        <h2>Haha</h2>
         <p>Welcome back! Let’s get you logged in.</p>
         <form>
             <div class="usernamepass">
