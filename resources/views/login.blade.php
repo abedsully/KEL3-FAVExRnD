@@ -16,7 +16,6 @@
     <div id = logo>
         <a href="/"><img src="image/login/logo.png" id= favebook alt="favebook"></a>
     </div>
-    <h1>Testing</h1>
     <div class = "center">
         <h1>Login</h1>
         <p>Welcome back! Let’s get you logged in.</p>
