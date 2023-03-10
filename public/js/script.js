@@ -19,7 +19,7 @@ function visible2(){
     var b = document.getElementById('hide3')
     var c = document.getElementById('hide4')
     var x = document.getElementById('password')
-    
+
     if(a.type === 'password'){
         a.type = 'text';
         b.style.display = 'block';
@@ -51,12 +51,12 @@ form.addEventListener('submit', (e) =>{
         messages.push('Email is required')
     } else if(email.value.indexOf('@')== -1 || email.value.indexOf('.com') == -1){
         messages.push('Please input the email correctly')
-    } 
+    }
     if (comment.value.length<3){
         messages.push('We need more comment, atleast 3 characters, thanks!')
     }
     if (messages.length > 0){
         e.preventDefault()
-        errorElement.innerText = messages.join(', ')    
+        errorElement.innerText = messages.join(', ')
     }
 })

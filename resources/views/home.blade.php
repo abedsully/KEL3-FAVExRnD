@@ -22,13 +22,13 @@
             <div class="d-flex justify-content-center m-5">
                     <div class="card" style="width: 30rem;">
                         @if ($post->Image != NULL)
-                            <img src="{{asset('/storage/Post/'.$post->Image)}}" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">{{$post->Title}}</h5>
-                                <p class="card-text">{{$post->Content}}</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
+                            <img src="{{asset('/storage/Post/'.$post->Image)}}" class="card-img-top" alt="...">
                         @endif
+                        <div class="card-body">
+                            <h5 class="card-title">{{$post->Title}}</h5>
+                            <p class="card-text">{{$post->Content}}</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
                     </div>
             </div>
             @endforeach

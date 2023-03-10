@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Add Post • Favebook</title>
 
     {{-- Bootstrap CSS --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -31,7 +31,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <textarea class="form-control w-100 @error('Content') is-invalid @enderror" id="content" placeholder="What are you thinking about this time" rows="10" name="Content" value="{{ old('Content') }}"></textarea>
+                    <textarea class="form-control w-100 @error('Content') is-invalid @enderror" id="content" placeholder="What are you thinking about this time" rows="10" name="Content">{{ old('Content') }}</textarea>
                         @error('Content')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
