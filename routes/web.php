@@ -37,4 +37,3 @@ Route::get('/add-post', [PostController::class, 'create']);
 
 // Store Add Post
 Route::post('/store-post', [PostController::class, 'store']);
-
