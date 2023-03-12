@@ -33,7 +33,7 @@ Route::get('/register', function () {
 });
 
 // Add Post Page
-Route::get('/add-post', [PostController::class, 'create']);
+Route::get('/compose', [PostController::class, 'create']);
 
 // Store Add Post
 Route::post('/store-post', [PostController::class, 'store']);
