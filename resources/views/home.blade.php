@@ -18,7 +18,7 @@
 <body>
 
         <div class="d-flex m-5 flex-column">
-            @foreach ($posts as $post)
+            @foreach ($posts->reverse() as $post)
             <div class="d-flex justify-content-center m-5">
                     <div class="card" style="width: 30rem;">
                         @if ($post->Image != NULL)

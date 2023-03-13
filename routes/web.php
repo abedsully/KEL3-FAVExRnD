@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -33,7 +35,7 @@ Route::get('/register', function () {
 });
 
 // Add Post Page
-Route::get('/add-post', [PostController::class, 'create']);
+Route::get('/compose', [PostController::class, 'create']);
 
 // Store Add Post
 Route::post('/store-post', [PostController::class, 'store']);
