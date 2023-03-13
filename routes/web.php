@@ -32,6 +32,11 @@ Route::get('/register', function () {
     return view('register');
 });
 
+// Report
+Route::get('/report', function () {
+    return view('report');
+});
+
 // Add Post Page
 Route::get('/add-post', [PostController::class, 'create']);
 
