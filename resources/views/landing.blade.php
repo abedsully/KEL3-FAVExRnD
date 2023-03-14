@@ -27,13 +27,15 @@
     </nav>
     
     <div class="center">
-        <img src="image/login/landingbn.png" alt="">
-        <div class ="content">
-            <h1 class = "create">Create</h1>
-            <h1 class = "comment">Comment</h1>
-            <h1 class = "connect">Connect</h1>
+        <img class="image" src="image/login/landingbn.png" alt="">
+        <div class ="text-container">
+            <img class = "text" src="image/login/Text.png" alt="">
         </div>
     </div>
+
+    <!-- <footer id="footer">
+        <img src="image/login/Footer.png" alt="">
+    </footer> -->
     
 </body>
 </html>
