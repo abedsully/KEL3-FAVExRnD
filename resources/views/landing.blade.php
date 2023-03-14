@@ -21,8 +21,12 @@
     <nav>
         <a href="/"><img src="image/login/logo.png" id= favebook alt="favebook"></a>
         <div class = "button">
-            <button id= "login" >Login</button>
-            <button id = "register">Register</button>
+            <a href="/login">
+                <button id= "login" >Login</button>
+            </a>
+            <a href="/register">
+                <button id = "register">Register</button>
+            </a>
         </div>
     </nav>
     
