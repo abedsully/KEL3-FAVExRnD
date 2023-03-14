@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-image: url("/image/login/background.png");
+    background-size: cover;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.button{
+    display: flex;
+    gap: 20px;
+}
+
+.button button{
+    border: 1px solid;
+    width: 145px;
+    height: 46px;
+    border-radius: 35px;
+}
+
+#login{
+    background-color: transparent;
+    color: white;
+}
+
