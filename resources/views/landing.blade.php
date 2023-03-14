@@ -17,7 +17,7 @@
     </style>
 </head>
 <body>
-    
+
     <nav>
         <a href="/"><img src="image/login/logo.png" id= favebook alt="favebook"></a>
         <div class = "button">
@@ -25,7 +25,7 @@
             <button id = "register">Register</button>
         </div>
     </nav>
-    
+
     <div class="center">
         <img class="image" src="image/login/landingbn.png" alt="">
         <div class ="text-container">
@@ -36,6 +36,6 @@
     <!-- <footer id="footer">
         <img src="image/login/Footer.png" alt="">
     </footer> -->
-    
+
 </body>
 </html>
