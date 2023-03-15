@@ -31,15 +31,19 @@
     </nav>
 
     <div class="center">
-        <img class="image" src="image/login/landingbn.png" alt="">
-        <div class ="text-container">
-            <img class = "text" src="image/login/Text.png" alt="">
+        <img src="image/login/landingbn.png" alt="">
+        <div class="center-text">
+            <p>Create</p>
+            <p>Comment</p>
+            <p>Connect</p>
+            <p>Contoh</p>
         </div>
     </div>
 
-    <!-- <footer id="footer">
+    <footer>
         <img src="image/login/Footer.png" alt="">
-    </footer> -->
+    </footer>
+
 
 </body>
 </html>
