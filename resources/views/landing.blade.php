@@ -33,10 +33,9 @@
     <div class="center">
         <img src="image/login/landingbn.png" alt="">
         <div class="center-text">
-            <p>Create</p>
-            <p>Comment</p>
-            <p>Connect</p>
-            <p>Contoh</p>
+            <p style="color: #FF6665">Create</p>
+            <p style="color: #FFD050">Comment</p>
+            <p style="color: #34CC99">Connect</p>
         </div>
     </div>
 
