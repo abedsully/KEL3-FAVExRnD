@@ -29,13 +29,6 @@ nav{
     margin-right: 32px;
 }
 
-.profile-pitcure{
-    width: 56px;
-    height: 56px;
-    border-radius: 60px;
-    margin-right: 32px;
-}
-
 .center{
     display: flex;
     flex-direction: column;
