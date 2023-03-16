@@ -22,7 +22,7 @@
         <a href="/"><img src="image/login/logo.png" id= favebook alt="favebook"></a>
         <div class = "button">
             <a href="/login">
-                <button id= "login" >Login</button>
+                <button id= "login">Login</button>
             </a>
             <a href="/register">
                 <button id = "register">Register</button>
