@@ -5,19 +5,27 @@
     font-family: 'Poppins', sans-serif;
 }
 
-nav{
-    height: 84px;
-    background: #0D2A39;
-}
-
 body{
     background-image: url("/image/login/background.png");
     background-size: cover;
 }
 
-.logo{
+nav{
+    height: 84px;
+    background: #0D2A39;
     padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
+.profile-pitcure{
+    width: 56px;
+    height: 56px;
+    border-radius: 60px;
+    margin-right: 32px;
+}
+
 
 .center{
     display: flex;
