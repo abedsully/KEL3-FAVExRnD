@@ -30,14 +30,17 @@
                 </div>
             </div>
             <a class="profile-section" href="/editprofile">Profile</a>
-            <a class="password-section" href="">Password</a>
+            <a class="password-section" href="/editpassword">Password</a>
         </div>
 
         <div class="right">
             <h1>Password</h1>
             <form>
                 <div class="password">
-                    <label for="">Password</label>
+                    <div class="content-password">
+                        <label for="">Password</label>
+                        <a href="">Forgot Password?</a>
+                    </div>
                     <input type="password" placeholder="Your Password">
                 </div>
                 <div class="newpassword">
