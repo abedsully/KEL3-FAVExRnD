@@ -84,3 +84,10 @@ nav{
     width: 135px;
     border: none;
 }
+
+footer img{
+    position: absolute;
+    top: 105%;
+    width: 100%;
+    z-index: -1;
+}

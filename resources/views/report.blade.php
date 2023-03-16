@@ -37,5 +37,9 @@
         </div>
     </div>
 
+    <footer>
+        <img src="image/login/Footer.png" alt="">
+    </footer>
+    
 </body>
 </html>
