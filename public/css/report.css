@@ -13,6 +13,9 @@ body{
 nav{
     height: 84px;
     background: #0D2A39;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     padding: 10px;
     display: flex;
     flex-direction: row;
@@ -25,7 +28,6 @@ nav{
     border-radius: 60px;
     margin-right: 32px;
 }
-
 
 .center{
     display: flex;
@@ -84,4 +86,11 @@ nav{
     height: 53px;
     width: 135px;
     border: none;
+}
+
+footer img{
+    position: absolute;
+    top: 105%;
+    width: 100%;
+    z-index: -1;
 }

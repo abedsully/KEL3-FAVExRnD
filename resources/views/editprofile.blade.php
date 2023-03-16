@@ -13,7 +13,9 @@
 </head>
 <body>
     <nav>
-        <img src="image/login/logo.png" class="logo" alt="">
+        <a href="/">
+            <img src="image/login/logo.png" class="logo" alt="">
+        </a>
         <a href="">
             <img class = "profile-pitcure" src="image/login/Rin.jpg" alt="">
         </a>
@@ -27,7 +29,7 @@
                     <a href="">Change Profile Photo</a>
                 </div>
             </div>
-            <a class="profile-section" href="">Profile</a>
+            <a class="profile-section" href="/editprofile">Profile</a>
             <a class="password-section" href="">Password</a>
         </div>
 
@@ -114,7 +116,7 @@
     </div>
 
     <footer>
-        <img src="image/Footer.png" alt="">
+        <img src="image/login/Footer.png" alt="">
     </footer>
 </body>
 </html>
