@@ -39,6 +39,7 @@ Route::get('/report', function () {
     return view('report');
 });
 
+// Edit Profile
 Route::get('/editprofile', function () {
     return view('editprofile');
 });
