@@ -69,7 +69,7 @@ body{
     display: flex;
     flex-direction: row;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     align-items: center;
@@ -103,7 +103,14 @@ body{
 
 footer img{
     position: absolute;
-    top: 83%;
+    text-align: center;
+    top: 103%;
     width: 100%;
     z-index: -1;
+}
+
+footer .footer-content p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
 }
