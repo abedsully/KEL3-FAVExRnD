@@ -39,6 +39,15 @@ Route::get('/report', function () {
     return view('report');
 });
 
+// Edit Profile
+Route::get('/editprofile', function () {
+    return view('editprofile');
+});
+
+Route::get('/editpassword', function () {
+    return view('editpassword');
+});
+
 // Add Post Page
 Route::get('/compose', [PostController::class, 'create']);
 

@@ -13,51 +13,57 @@ body{
     background-size: cover;
 }
 
-nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 40px 30px 0px;
+.nav-bar {
+  background-color: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 30px 0px;
 }
 
-.button{
-    display: flex;
-    gap: 20px;
+.nav-bar a {
+  text-decoration: none;
 }
 
-.button button{
-    border: 1px solid;
-    width: 145px;
+.button-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.login-button,
+.register-button {
+    margin: 0px 10px;
+}
+
+.login, 
+.register{
+    width: 127px;
     height: 46px;
     border-radius: 35px;
-}
-
-#login{
-    background: transparent;
-    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
     font-weight: 600;
 }
 
-#register{
-    background: #0081C9;
+.login{
+    background: none;
+    color: white;
+    border: 1px solid white;
+}
+
+.register{
+    background-color: #0081C9;
     color: white;
     border: none;
-    font-weight: 600;
 }
 
-#login:hover{
-    background: #FFC93C;
-    cursor: pointer;
-    border: none;
+.login:hover,
+.register:hover {
+    background-color: #FFC93C;
     color: black;
 }
 
-#register:hover{
-    background: #FFC93C;
-    cursor: pointer;
-    border: none;
-    color: black;
-}
 
 .center{
     display: flex;
@@ -67,17 +73,22 @@ nav{
     left: 50%;
     transform: translate(-50%, -50%);
     align-items: center;
-    gap: 56px;
+    gap: 100px;
     padding: 100px 0px 0px;
+}
+
+.center img{
+    width: 700px;
+    height: 600px;
+}
+
+.center-text p{
+    font-size: 75px;
+    font-weight: bold;
 }
 
 .content{
     display: flex;
-}
-
-.image{
-    width: 759px;
-    height: 633px;
 }
 
 .textcontainer{
@@ -90,11 +101,16 @@ nav{
     height: 321px;
 }
 
-/* Footer Masih pusing */
-/* #footer {
-    display: flex;
-    justify-content: center;
+footer img{
+    position: absolute;
+    text-align: center;
+    top: 103%;
     width: 100%;
     z-index: -1;
-} */
+}
 
+footer .footer-content p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}

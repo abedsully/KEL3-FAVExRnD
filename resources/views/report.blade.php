@@ -13,7 +13,12 @@
 </head>
 <body>
     <nav>
-        <img src="image/login/logo.png" class="logo" alt="">
+        <a href="/">
+            <img src="image/login/logo.png" class="logo" alt="">
+        </a>
+        <a href="">
+            <img class = "profile-pitcure" src="image/login/Rin.jpg" alt="">
+        </a>
     </nav>
 
     <div class="center">
@@ -32,5 +37,9 @@
         </div>
     </div>
 
+    <footer>
+        <img src="image/login/Footer.png" alt="">
+    </footer>
+    
 </body>
 </html>

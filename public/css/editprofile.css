@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-image: url("/image/login/background.png");
+    background-size: cover;
+}
+
+nav{
+    height: 84px;
+    background: #0D2A39;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.profile-picture{
+    width: 56px;
+    height: 56px;
+    border-radius: 60px;
+    margin-right: 32px;
+}
+
+.center{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 30px;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.25);
+    height: 200px;
+    width: 300px;
+}
+
+.profile{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.profile-content h2{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.profile-content a{
+    text-decoration: none;
+    color: #5BC0F8;
+    font-size: 12px;
+}
+
+.profile-section{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    padding-top: 28px;
+    color: #FABE22;
+    text-decoration: underline;
+}
+
+.password-section{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    padding-top: 12px;
+    color: #828282;
+}
+
+.profile img{
+    width: 56px;
+    height: 56px;
+    border-radius: 60px;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.25);
+    width: 800px;
+    padding: 30px;
+}
+
+.right form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.birth{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.right h1{
+    padding-top: 40px;
+    text-align: center;
+    color:#0081C9;
+    padding-bottom: 24px;
+}
+
+.right label{
+    color:#0081C9;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.name{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.first-name{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.last-name{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+form input{
+    border-radius: 8px;
+    padding: 10px;
+    margin: 6px 0px 10px 0px;
+    border: 2px solid #E3E3E3;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.email{
+    display: flex;
+    flex-direction: column;
+}
+
+.username{
+    display: flex;
+    flex-direction: column;
+}
+
+.birth{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pob{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.dob{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.pob select{
+    border-radius: 8px;
+    padding: 10px;
+    margin: 6px 0px 10px 0px;
+    border: 2px solid #E3E3E3;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+#button{
+    display: flex;
+    justify-content: flex-end;
+    padding: 24px;  
+}
+
+#button button{
+    background: #FFC93C;
+    border-radius: 8px;
+    text-align: center;
+    color: #11384D;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    width: 118px;
+    height: 53px;
+    border: none;
+    padding: 15px 40px;
+}
+
+footer img{
+    position: absolute;
+    top: 110%;
+    width: 100%;
+    z-index: -1;
+}
+
+
