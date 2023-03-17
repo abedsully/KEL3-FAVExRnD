@@ -17,24 +17,24 @@
             <img src="image/login/logo.png" class="logo" alt="">
         </a>
         <a href="">
-            <img class = "profile-pitcure" src="image/login/Rin.jpg" alt="">
+            <img class = "profile-picture" src="image/login/ProfilePitcure.webp" alt="">
         </a>
     </nav>
     <div class="center">
         <div class="left">
             <div class="profile">
-                <img src="image/login/Rin.jpg" alt="">
+                <img src="image/login/ProfilePitcure.webp" alt="">
                 <div class = "profile-content">
                     <h2>Username</h2>
                     <a href="">Change Profile Photo</a>
                 </div>
             </div>
             <a class="profile-section" href="/editprofile">Profile</a>
-            <a class="password-section" href="">Password</a>
+            <a class="password-section" href="/editpassword">Password</a>
         </div>
 
         <div class="right">
-            <h1>My Profile</h1>
+            <h1>Edit Profile</h1>
             <form>
                 <div class="name">
                     <div class="first-name">
@@ -52,52 +52,12 @@
                 </div>
                 <div class="username">
                     <label>Username</label>
-                    <input type="Username" placeholder = "Enter your username here">
+                    <input type="text" placeholder = "Enter your username here">
                 </div>
                 <div class="birth">
                     <div class="pob">  
                         <label>Place Of Birth</label>
-                        <select name="place" id="place">
-                            <option value="">Select state</option>
-                            <option value="AC">Aceh</option>
-                            <option value="BA">Bali</option>
-                            <option value="BB">Bangka Belitung Islands</option>
-                            <option value="BT">Banten</option>
-                            <option value="BE">Bengkulu</option>
-                            <option value="JT">Central Java</option>
-                            <option value="KT">Central Kalimantan</option>
-                            <option value="ST">Central Sulawesi</option>
-                            <option value="JI">East Java</option>
-                            <option value="KI">East Kalimantan</option>
-                            <option value="NT">East Nusa Tenggara</option>
-                            <option value="GO">Gorontalo</option>
-                            <option value="JK">Jakarta</option>
-                            <option value="JA">Jambi</option>
-                            <option value="KA">Kalimantan</option>
-                            <option value="LA">Lampung</option>
-                            <option value="NU">Lesser Sunda Islands</option>
-                            <option value="MA">Maluku</option>
-                            <option value="ML">Maluku Islands</option>
-                            <option value="KU">North Kalimantan</option>
-                            <option value="MU">North Maluku</option>
-                            <option value="SA">North Sulawesi</option>
-                            <option value="SU">North Sumatra</option>
-                            <option value="PA">Papua</option>
-                            <option value="RI">Riau</option>
-                            <option value="KR">Riau Islands</option>
-                            <option value="KS">South Kalimantan</option>
-                            <option value="SN">South Sulawesi</option>
-                            <option value="SS">South Sumatra</option>
-                            <option value="SG">Southeast Sulawesi</option>
-                            <option value="YO">Special Region of Yogyakarta</option>
-                            <option value="SL">Sulawesi</option>
-                            <option value="SM">Sumatra</option>
-                            <option value="JB">West Java</option>
-                            <option value="NB">West Nusa Tenggara</option>
-                            <option value="PB">West Papua</option>
-                            <option value="SR">West Sulawesi</option>
-                            <option value="SB">West Sumatra</option>
-                        </select>
+                        <input type="text" placeholder="Enter your place of birth">
                     </div>
                     <div class="dob">
                         <label for="">Date of Birth</label>
