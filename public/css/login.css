@@ -110,6 +110,12 @@ body{
     cursor: pointer;
 }
 
+#button button:hover{
+    background: #0081C9;
+    color: white;
+    cursor: pointer;
+}
+
 #donthave{
     display: flex;
     flex-direction: row;
