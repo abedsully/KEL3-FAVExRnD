@@ -11,12 +11,7 @@ body{
 }
 
 #favebook{
-    padding:50px 0px 0px 45px;
-    width: 280px;
-    /* position: absolute;
-    width: 186px;
-    left: 73px;
-    top: 54px; */
+    padding: 40px 30px 0px;
 }
 
 .center{
@@ -110,6 +105,12 @@ body{
     cursor: pointer;
 }
 
+#button button:hover{
+    background: #0081C9;
+    color: white;
+    cursor: pointer;
+}
+
 #donthave{
     display: flex;
     flex-direction: row;
@@ -128,4 +129,11 @@ body{
     color: #0081C9;
     font-weight: 500;
     padding: 6px 0px 0px 0px;
+}
+
+footer img{
+    position: absolute;
+    top: 83%;
+    width: 100%;
+    z-index: -1;
 }

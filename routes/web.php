@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -32,8 +34,22 @@ Route::get('/register', function () {
     return view('register');
 });
 
+// Report
+Route::get('/report', function () {
+    return view('report');
+});
+
+// Edit Profile
+Route::get('/editprofile', function () {
+    return view('editprofile');
+});
+
+Route::get('/editpassword', function () {
+    return view('editpassword');
+});
+
 // Add Post Page
-Route::get('/add-post', [PostController::class, 'create']);
+Route::get('/compose', [PostController::class, 'create']);
 
 // Store Add Post
 Route::post('/store-post', [PostController::class, 'store']);
