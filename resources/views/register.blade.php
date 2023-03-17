@@ -14,9 +14,6 @@
         </style>
     </head>
     <body>
-        <h1>Testing</h1>
-        <h2>Testing</h2>
-        <h3>testing</h3>
         <div class="logo">
             <img src="/image/register/logo.png" alt="logo favebook" class="favebook">
         </div>
