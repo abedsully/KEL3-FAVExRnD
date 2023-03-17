@@ -18,15 +18,21 @@
 </head>
 <body>
 
-    <nav>
-        <a href="/"><img src="image/login/logo.png" id= favebook alt="favebook"></a>
-        <div class = "button">
-            <a href="/login">
-                <button id= "login">Login</button>
-            </a>
-            <a href="/register">
-                <button id = "register">Register</button>
-            </a>
+    <nav class="nav-bar">
+        <a href="/">
+            <img src="image/login/logo.png" id= favebook alt="favebook">
+        </a>
+        <div class = "button-content">
+            <div class="login-button">
+                <a href="/login">
+                    <button class="login">Login</button>
+                </a>
+            </div>
+            <div class="register-button">
+                <a href="/register">
+                    <button class = "register">Register</button>
+                </a>
+            </div>
         </div>
     </nav>
 
@@ -42,7 +48,6 @@
     <footer>
         <img src="image/login/Footer.png" alt="">
     </footer>
-
 
 </body>
 </html>
