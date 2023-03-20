@@ -26,6 +26,7 @@
                 <img src="image/login/ProfilePitcure.webp" alt="">
                 <div class = "profile-content">
                     <h2>Username</h2>
+                    <input type="file">
                     <a href="">Change Profile Photo</a>
                 </div>
             </div>
@@ -55,7 +56,7 @@
                     <input type="text" placeholder = "Enter your username here">
                 </div>
                 <div class="birth">
-                    <div class="pob">  
+                    <div class="pob">
                         <label>Place Of Birth</label>
                         <input type="text" placeholder="Enter your place of birth">
                     </div>
