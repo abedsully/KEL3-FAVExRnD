@@ -15,7 +15,9 @@
     </head>
     <body>
         <div class="logo">
-            <img src="/image/register/logo.png" alt="logo favebook" class="favebook">
+            <a href="/">
+                <img src="/image/register/logo.png" alt="logo favebook" class="favebook">
+            </a>
         </div>
         <section class="form-wrapper">
             <h1 class="title">Register</h1>
