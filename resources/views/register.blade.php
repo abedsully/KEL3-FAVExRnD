@@ -20,7 +20,7 @@
         <section class="form-wrapper">
             <h1 class="title">Register</h1>
             <p class="welcome">Welcome to Favebook! Let’s get started.</p>
-                <form action="../Register 2/index2.html" id="form" autocomplete="off">
+                <form action="../Register2/index2.html" id="form" autocomplete="off">
                     <div class="nama1">
                         <label for="firstName">First Name</label> <br>
                         <input type="text" id="firstName" placeholder="Enter your first name here">
