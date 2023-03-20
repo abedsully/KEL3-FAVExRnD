@@ -15,7 +15,9 @@
     </head>
     <body>
         <div class="logo">
-            <img src="/image/register/logo.png" alt="logo favebook" class="favebook">
+            <a href="/">
+                <img src="/image/register/logo.png" alt="logo favebook" class="favebook">
+            </a>
         </div>
         <section class="form-wrapper">
             <h1 class="title">Register</h1>
@@ -23,15 +25,15 @@
                 <form action="../Register2/index2.html" id="form" autocomplete="off">
                     <div class="nama1">
                         <label for="firstName">First Name</label> <br>
-                        <input type="text" id="firstName" placeholder="Enter your first name here">
+                        <input type="text" id="firstName" placeholder="Enter your first name here" name="fname">
                     </div>
                     <div class="nama2">
                         <label for="lastName">Last Name</label> <br>
-                        <input type="text" id="lastName" placeholder="Enter your last name here">
+                        <input type="text" id="lastName" placeholder="Enter your last name here" name="lname">
                     </div>
                     <div class="email">
                         <label for="email">Email</label> <br>
-                        <input type="text" id="email" placeholder="Enter your email name here (Ex: bncc123@gmail.com)">
+                        <input type="text" id="email" placeholder="Enter your email name here (Ex: bncc123@gmail.com)" name="email">
                     </div>
                     <div class="psw">
                         <label for="password">Password</label> <br>
