@@ -17,12 +17,12 @@
         <div class="logo">
             <a href="/"><img src="../image/register/logo.png" alt="Favebook logo"></a>
         </div>
-        <section class="form-wrapper"> 
+        <section class="form-wrapper">
             <div class="title">
                 <h1>Register</h1>
                 <p>Welcome to favebook! Let’s get started. </p>
             </div>
-            <form action="/register-2" class="form" autocomplete="off">
+            <form action="register-2" class="form" autocomplete="off">
                 <div class="first-last">
                     <div class="first-name">
                         <label for="firstName">First Name</label>

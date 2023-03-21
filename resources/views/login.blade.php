@@ -49,7 +49,7 @@
             </div>
 
             <div id="donthave">
-                <p>Don't have an account yet? <a href=""> Sign Up</a> </p>
+                <p>Don't have an account yet? <a href="register"> Sign Up</a> </p>
             </div>
         </form>
     </div>
