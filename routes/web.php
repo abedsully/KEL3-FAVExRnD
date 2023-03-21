@@ -29,9 +29,13 @@ Route::get('/login', function () {
     return view('login');
 });
 
-// Register Page
+// Register Page 1 of 2
 Route::get('/register', function () {
     return view('register');
+});
+// Register Page 2 of 2
+Route::get('/register-2', function () {
+    return view('register2');
 });
 
 // Report

@@ -15,51 +15,53 @@
     </head>
     <body>
         <div class="logo">
-            <a href="/">
-                <img src="/image/register/logo.png" alt="logo favebook" class="favebook">
-            </a>
+            <a href="/"><img src="../image/register/logo.png" alt="Favebook logo"></a>
         </div>
-        <section class="form-wrapper">
-            <h1 class="title">Register</h1>
-            <p class="welcome">Welcome to Favebook! Let’s get started.</p>
-                <form action="../Register 2/index2.html" id="form" autocomplete="off">
-                    <div class="nama1">
-                        <label for="firstName">First Name</label> <br>
-                        <input type="text" id="firstName" placeholder="Enter your first name here" name="fname">
+        <section class="form-wrapper"> 
+            <div class="title">
+                <h1>Register</h1>
+                <p>Welcome to favebook! Let’s get started. </p>
+            </div>
+            <form action="/register-2" class="form" autocomplete="off">
+                <div class="first-last">
+                    <div class="first-name">
+                        <label for="firstName">First Name</label>
+                        <input type="text" placeholder="Enter your first name here" id="firstName">
                     </div>
-                    <div class="nama2">
-                        <label for="lastName">Last Name</label> <br>
-                        <input type="text" id="lastName" placeholder="Enter your last name here" name="lname">
+                    <div class="last-name">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" placeholder="Enter your last name here" id="lastName">
                     </div>
-                    <div class="email">
-                        <label for="email">Email</label> <br>
-                        <input type="text" id="email" placeholder="Enter your email name here (Ex: bncc123@gmail.com)" name="email">
+                </div>
+                <div class="e-mail">
+                    <label for="emailAddress">Email</label>
+                    <input type="text" placeholder="Enter your email name here (Ex : bncc123@gmail.com)" id="emailAddress">
+                </div>
+                <div class="password">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Enter your password here (Ex : Bncc123_)" id="password">
+                    <div class="visibility" onclick="visible()">
+                        <i class="fa-solid fa-eye" id="hide1" ></i>
+                        <i class="fa-solid fa-eye-slash" id="hide2" ></i>
                     </div>
-                    <div class="psw">
-                        <label for="password">Password</label> <br>
-                        <input type="password" id="password" placeholder="Enter your password here">
-                        <div class="visibility" onclick="visible()">
-                            <i class="fa-solid fa-eye" id="hide1" ></i>
-                            <i class="fa-solid fa-eye-slash" id="hide2" ></i>
-                        </div>
+                </div>
+                <div class="password-confirm">
+                    <label for="confirm-pass">Confirm Password</label>
+                    <input type="password" placeholder="Enter your password here (Ex : Bncc123_)" id="confirm-pass">
+                    <div class="visibility2" onclick="visible2()">
+                        <i class="fa-solid fa-eye" id="hide3"></i>
+                        <i class="fa-solid fa-eye-slash" id="hide4"></i>
                     </div>
-                    <div class="confirm-psw">
-                        <label for="confirmPsw">Confirm Password</label> <br>
-                        <input type="password" id="confirmPsw" placeholder="Enter your password here (Ex: bncc123_)">
-                        <div class="visibility2" onclick="visible2()">
-                            <i class="fa-solid fa-eye" id="hide3" ></i>
-                            <i class="fa-solid fa-eye-slash" id="hide4" ></i>
-                        </div>
-                    </div>
-                    <div class="next">
-                        <a href="../Register 2/index2.html"><button type="submit" class="next-sambit">Next</button></a>
-                    </div>
-                </form>
+                </div>
+                <div class="next">
+                    <button type="submit">Next</button>
+                </div>
+            </form>
         </section>
         <footer>
-            <p>All content © 2023 Favebook. All rights reserved.</p>
+            <img src="../image/register/footer.png" alt="template footer">
         </footer>
-        <script src="script.js"></script>
-        <script src="https://kit.fontawesome.com/ca8cef09e9.js" crossorigin="anonymous"></script>
     </body>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/ca8cef09e9.js" crossorigin="anonymous"></script>
 </html>
