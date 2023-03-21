@@ -76,3 +76,35 @@ function loginvisible(){
         l.style.display = 'block';
     }
 }
+
+function visible3(){
+    var j = document.getElementById('newpassword')
+    var k = document.getElementById('hide3')
+    var l = document.getElementById('hide4')
+
+    if(j.type === 'password'){
+        j.type = 'text';
+        k.style.display = 'block';
+        l.style.display = 'none';
+    }else{
+        j.type = 'password';
+        k.style.display = 'none';
+        l.style.display = 'block';
+    }
+}
+
+function visible4(){
+    var j = document.getElementById('confirmpassword')
+    var k = document.getElementById('hide5')
+    var l = document.getElementById('hide6')
+
+    if(j.type === 'password'){
+        j.type = 'text';
+        k.style.display = 'block';
+        l.style.display = 'none';
+    }else{
+        j.type = 'password';
+        k.style.display = 'none';
+        l.style.display = 'block';
+    }
+}
