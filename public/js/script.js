@@ -60,3 +60,19 @@ form.addEventListener('submit', (e) =>{
         errorElement.innerText = messages.join(', ')
     }
 })
+
+function loginvisible(){
+    var j = document.getElementById('loginpassword')
+    var k = document.getElementById('hide5')
+    var l = document.getElementById('hide6')
+
+    if(j.type === 'password'){
+        j.type = 'text';
+        k.style.display = 'block';
+        l.style.display = 'none';
+    }else{
+        j.type = 'password';
+        k.style.display = 'none';
+        l.style.display = 'block';
+    }
+}

@@ -37,7 +37,7 @@
                     </div>
                     <div class="psw">
                         <label for="password">Password</label> <br>
-                        <input type="password" id="password" placeholder="Enter your password here (Ex: bncc123_)">
+                        <input type="password" id="password" placeholder="Enter your password here">
                         <div class="visibility" onclick="visible()">
                             <i class="fa-solid fa-eye" id="hide1" ></i>
                             <i class="fa-solid fa-eye-slash" id="hide2" ></i>
