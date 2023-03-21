@@ -87,6 +87,17 @@ nav{
     border-radius: 60px;
 }
 
+.profile-content label{
+    text-decoration: none;
+    color: #5BC0F8;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.profile input[type="file"]{
+    display: none;
+}
+
 .right{
     display: flex;
     flex-direction: column;
@@ -206,6 +217,13 @@ form input{
     height: 53px;
     border: none;
     padding: 15px 40px;
+}
+
+#button button:hover{
+    background: #0081C9;
+    color: white;
+    cursor: pointer;
+    transition: .5s;
 }
 
 footer img{

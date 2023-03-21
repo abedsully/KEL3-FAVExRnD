@@ -26,8 +26,10 @@
                 <img src="image/login/ProfilePitcure.webp" alt="">
                 <div class = "profile-content">
                     <h2>Username</h2>
-                    <input type="file">
-                    <a href="">Change Profile Photo</a>
+                    <label for="file-upload" class="change-profile-picture">
+                        Change Profile Photo
+                    </label>
+                    <input id="file-upload" type="file">
                 </div>
             </div>
             <a class="profile-section" href="/editprofile">Profile</a>
