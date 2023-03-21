@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
     <link rel="icon" href="/image/login/icon.svg" sizes="any" type="image/svg+xml">
+    <script src="{{ asset('/js/script.js') }}"></script>
     <title>Login • Favebook</title>
     <style>
         /* Added Font Awesome Links */
@@ -26,7 +27,11 @@
             </div>
             <div class="usernamepass">
                 <label>Password</label>
-                <input type="password" placeholder="Enter your password here" id="password">
+                <input type="password" id="loginpassword" placeholder="Enter your password here">
+                <div class="visibility" onclick="loginvisible()">
+                    <i class="fa-solid fa-eye" id="hide5" ></i>
+                    <i class="fa-solid fa-eye-slash" id="hide6" ></i>
+                </div>
             </div>
             <div class="content">
                 <div class = "rememberme">
@@ -52,5 +57,7 @@
     <footer>
         <img src="image/login/Footer.png" alt="">
     </footer>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/ca8cef09e9.js" crossorigin="anonymous"></script>
 </body>
 </html>

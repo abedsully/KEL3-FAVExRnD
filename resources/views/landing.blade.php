@@ -47,8 +47,7 @@
 
     <footer>
         <div class = "footer-content">
-            <img src="image/login/FooterNoText.png" alt="">
-            <p>All content © 2023 Favebook. All rights reserved.</p>
+            <img src="image/login/Footer.png" alt="">
         </div>
     </footer>
 
