@@ -9,7 +9,6 @@
     padding: 4vh 1.5vw 0;
 }
 body{
-    position: absolute;
     background: url(../image/register/Template.png);
     background-size: cover;
     background-repeat: none;
@@ -46,22 +45,42 @@ body{
     font-weight: 400;
     font-size: 14px;
 }
-/* FirstName & LastName*/
-.form-wrapper .form .first-last{
+/* Username & Phone Number*/
+.form2 .u-name label, .form2 .phone label{
+    display: flex;
+    font-style: normal;
+    color: #0081C9;
+    font-weight: 600;
+    margin: 4vh 0 1vh 0;
+    font-size: 1rem;
+}
+.form2 .u-name input, .form2 .phone input{
+    display: flex;
+    font-style: normal;
+    color: #707070;
+    border: 2px solid #E3E3E3;
+    padding: 2vh 1vw;
+    border-radius: 6px;
+    font-weight: 400;
+    font-size: 1rem;
+    width: 38vw;
+}
+/* POB & DOB*/
+.form-wrapper .form2 .place-date{
     display: flex;
     justify-content: space-between;
+    margin: 3.5vh 0 1vh 0;
 }
-.form-wrapper .form .first-last .first-name{
+.form-wrapper .form2 .place-date .birth-place{
     width: 18vw;
     height: 10vh;
 }
-.form-wrapper .form .first-last .last-name{
+.form-wrapper .form2 .place-date .birth-date{
     width: 18vw;
     height: 10vh;
-    margin: 0 0 1vh 0;
 }
-/* FirstName, LastName */
-.form .first-name label, .form .last-name label{
+/* POB & DOB*/
+.form2 .birth-place label, .form2 .birth-date label{
     display: flex;
     font-style: normal;
     color: #0081C9;
@@ -69,7 +88,7 @@ body{
     margin: 1vh 0;
     font-size: 1rem;
 }
-.form .first-name input, .form .last-name input{
+.form2 .birth-place input, .form2 .birth-date input{
     display: flex;
     font-style: normal;
     color: #707070;
@@ -81,57 +100,36 @@ body{
     font-size: 1rem;
     width: 16vw;
 }
-/* Email */
-.form .e-mail label{
+/* Gender */
+.form-wrapper .gender p{
     display: flex;
     font-style: normal;
     color: #0081C9;
     font-weight: 600;
-    margin: 3.5vh 0 1vh 0;
+    margin: 3.5vh 0;
     font-size: 1rem;
 }
-.form .e-mail input{
-    display: flex;
-    font-style: normal;
+.form-wrapper .gender label{
     color: #707070;
-    border: 2px solid #E3E3E3;
-    padding: 2vh 1vw;
-    border-radius: 6px;
-    font-weight: 400;
     font-size: 1rem;
-    width: 38vw;
+    margin: 0 5vw 0 0;
 }
-/* Password - Confirm Password */
-.form .password label, .form .password-confirm label{
-    display: flex;
-    font-style: normal;
-    color: #0081C9;
-    font-weight: 600;
-    margin: 3.5vh 0 1vh 0;
-    font-size: 1rem;
+.form-wrapper .gender input{
+    font-size: 5rem;
+    margin: 0 0.5vw 4vh 0;
 }
-.form .password input, .form .password-confirm input{
+/* Back and Submit button */
+.form-wrapper .back-submit{
     display: flex;
-    font-style: normal;
-    color: #707070;
-    border: 2px solid #E3E3E3;
-    padding: 2vh 1vw;
-    border-radius: 6px;
-    font-weight: 400;
-    font-size: 1rem;
-    width: 38vw;
+    justify-content: space-between;
 }
-/* next-button */
-.form-wrapper .next{
+/* Back */
+.form-wrapper .back-submit .back a{
     display: flex;
-    justify-content: flex-end;
-    margin: 1vh 0;
-}
-
-.form-wrapper .next button{
-    display: flex;
+    color: black;
     background-color: #FFC93C;
     border: none;
+    text-decoration: none;
     border-radius: 8px;
     margin: 3.5vh 0;
     padding: 2vh 2.5vw;
@@ -140,44 +138,42 @@ body{
     font-size: 1rem;
     box-shadow: 0 0 4px #707070;
 }
-.form-wrapper .next button:hover{
-    transition: 0.5s;
-    background-color: #0081C9;
-    color: white;
+.form-wrapper .back-submit .back a:hover{
+    transition: 1s;
+    background-color: #195bff;
+    color: #FFFFFF;
+}
+/* Submit */
+.form-wrapper .back-submit .submit button{
+    display: flex;
+    color: black;
+    background-color: #FFC93C;
     border: none;
+    text-decoration: none;
+    border-radius: 8px;
+    margin: 3.5vh 0;
+    padding: 2vh 2.5vw;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 0 4px #707070;
+}
+.form-wrapper .back-submit .submit button:hover{
+    transition: 1s;
+    background-color: #195bff;
+    color: #FFFFFF;
 }
 /* Footer */
 footer{
-    position: absolute;
+    height: 25vh;
 }
 footer img{
     width: 98.75vw;
     height: 25vh;
 }
-/* Visibility */
-.visibility{
+footer p{
     display: flex;
-    position: absolute;
-    left: 67%;
-    top: 50.5%;
-}
-.visibility2{
-    display: flex;
-    position: absolute;
-    left: 67%;
-    top: 63%;
-}
-.visibility i{
-    display: flex;
-    cursor: pointer;
-}
-#hide1{
-    display: none;
-}
-.visibility2 i{
-    position: absolute;
-    cursor: pointer;
-}
-#hide3{
-    display: none;
+    justify-content: center;
+    align-content: center;
+    color: #FFFFFF;
 }
