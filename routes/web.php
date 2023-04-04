@@ -33,10 +33,6 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('register');
 });
-// Register Page 2 of 2
-Route::get('/register-2', function () {
-    return view('register2');
-});
 
 // Report
 Route::get('/report', function () {
