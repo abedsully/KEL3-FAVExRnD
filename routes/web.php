@@ -29,7 +29,7 @@ Route::get('/login', function () {
     return view('login');
 });
 
-// Register Page 1 of 2
+// Register Page 1 and 2
 Route::get('/register', function () {
     return view('register');
 });
@@ -37,6 +37,11 @@ Route::get('/register', function () {
 // Report
 Route::get('/report', function () {
     return view('report');
+});
+
+// User profile Page
+Route::get('/userpage', function () {
+    return view('userpage');
 });
 
 // Edit Profile

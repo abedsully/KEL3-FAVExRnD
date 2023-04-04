@@ -1,7 +1,33 @@
-.bg-custom-1 {
-    background-color: #85144b;
-  }
-
-  .bg-custom-2 {
-  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
-  }
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Popins',sans-serif;
+}
+body{
+  background: url(../image/register/Template.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  overflow-x: hidden;
+}
+/* Navigation Bar */
+nav{
+  display: flex;
+  position: sticky;
+  justify-content: space-between;
+  background-color: #0D2A39;
+  width: 100vw;
+  height: 10vh;
+}
+.navbar .logo{
+  display: flex;
+  justify-content: flex-start;
+  width: 186px;
+  padding: 1vh 1.5vw;
+}
+.navbar .profile-picture{
+  display: flex;
+  justify-content: flex-end;
+  width: 56px;
+  padding: 1vh 1.5vw;
+}

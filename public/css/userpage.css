@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Popins',sans-serif;
+}
+body{
+    background: url(assets/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    overflow-x: hidden;
+}
+/* Navigation Bar */
+nav{
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    background-color: #0D2A39;
+    width: 100vw;
+    height: 10vh;
+}
+.navbar .logo{
+    display: flex;
+    justify-content: flex-start;
+    width: 186px;
+    padding: 1vh 1.5vw;
+}
+.navbar .profile-picture{
+    display: flex;
+    justify-content: flex-end;
+    width: 56px;
+    padding: 1vh 1.5vw;
+}
+/* User Profile */
+.user-profile{
+    display: flex;
+    width: 70vw;
+    height: 30vh;
+    margin: 4vh 15vw;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+}
+.user-profile .pp{
+    display: flex;
+    width: 180px;
+    margin: 1vh 0 0 1vw;
+}
+.user-profile .pp img{
+    display: flex;
+    margin: 2.5vh 1vw;
+    width: 180px;
+    height: 180px;
+}
+.user-profile .user-info h2{
+    display: flex;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 38px;
+    margin: 6vh 0 0 2.5vw;
+}
+.user-profile .user-info p{
+    display: flex;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: #707070;
+    margin: 0.5vh 2.5vw 2.5vh 2.5vw;
+}
+
+.user-profile .user-info .style-button button{
+    display: flex;
+    background-color: #FFC93C;
+    border-radius: 15px;
+    padding: 1.5vh 1.5vw;
+    margin: 0.5vh 2.5vw;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    color: #11384D;
+    border: none;
+}
+.user-profile .user-info .style-button i{
+    display: flex;
+    margin: 0 0.25vw 0 0;
+}
+
+/* MyPost */
+.my-post{
+    width: 66vw;
+    height: 100vh;
+    margin: 4vh 15vw;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    padding: 1vh 2vw 0 2vw;
+}
+.my-post .my-postingan h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    color: #0081C9;
+}
+.my-post .my-postingan hr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
