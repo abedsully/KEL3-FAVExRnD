@@ -46,7 +46,7 @@ Route::get('/userpage', function () {
 });
 
 // Edit Profile
-Route::get('/edit-profile', [UserController::class, 'index'])->middleware('isAdmin');
+Route::get('/edit-profile', [UserController::class, 'index']);
 
 Route::get('/editpassword', function () {
     return view('editpassword');
