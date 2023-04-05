@@ -19,7 +19,7 @@ class RegisterController extends Controller
             'lastName' => 'required',
             'email' => 'required|unique:users|email:dns',
             'password' => 'required|min:8|regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9])/|string',
-            'confirm' => 'required|min:8|regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9])/|string|required_with:confirm|same:confirm',
+            'confirm' => 'required|min:8|regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9])/|string|same:password',
             'username' => 'required|unique:users',
             'place' => 'required',
             'dob' => 'required',
