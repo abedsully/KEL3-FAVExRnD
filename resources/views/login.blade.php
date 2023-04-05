@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
     <link rel="icon" href="/image/login/icon.svg" sizes="any" type="image/svg+xml">
     <script src="{{ asset('/js/script.js') }}"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <title>Login • Favebook</title>
     <style>
         /* Added Font Awesome Links */
@@ -20,14 +21,23 @@
     <div class = "center">
         <h1>Login</h1>
         <p>Welcome back! Let’s get you logged in.</p>
-        <form>
+        <form action="/login" method="POST">
+            @csrf
+            @if(session('loginError'))
+
+             <div class="alert alert-danger" role="alert">
+                {{ session('loginError') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+            @endif
             <div class="usernamepass">
                 <label>Username</label>
-                <input type="text" placeholder="Enter your username here" id="username">
+                <input type="text" placeholder="Enter your username here" id="username" name="username">
             </div>
             <div class="usernamepass">
                 <label>Password</label>
-                <input type="password" id="loginpassword" placeholder="Enter your password here">
+                <input type="password" id="loginpassword" placeholder="Enter your password here" name="password">
                 <div class="visibility" onclick="loginvisible()">
                     <i class="fa-solid fa-eye" id="hide5" ></i>
                     <i class="fa-solid fa-eye-slash" id="hide6" ></i>
@@ -45,7 +55,7 @@
                 </div>
             </div>
             <div id="button">
-                <button>Login</button>
+                <button type="submit">Login</button>
             </div>
 
             <div id="donthave">
@@ -59,5 +69,7 @@
     </footer>
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/ca8cef09e9.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
 </body>
 </html>

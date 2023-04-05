@@ -1,8 +1,9 @@
+console.log('test')
+// Tombol mata Password
 function visible(){
     var x = document.getElementById('password')
     var y = document.getElementById('hide1')
     var z = document.getElementById('hide2')
-
     if(x.type === 'password'){
         x.type = 'text';
         y.style.display = 'block';
@@ -14,8 +15,9 @@ function visible(){
     }
 }
 
+// Tombol mata confirm - password
 function visible2(){
-    var a = document.getElementById('confirmPsw')
+    var a = document.getElementById('confirmpass')
     var b = document.getElementById('hide3')
     var c = document.getElementById('hide4')
     var x = document.getElementById('password')
@@ -29,31 +31,55 @@ function visible2(){
         b.style.display = 'none';
         c.style.display = 'block';
     }
-    if(a != x){
-        alert('blokkk')
-    }
+}
+// Visibility of Form
+function registerP2(){
+    var aw = document.getElementById('register1');
+    var az = document.getElementById('register2');
+
+    az.style.display = 'block';
+    aw.style.display = 'none';
+}
+function registerP1(){
+    var avv = document.getElementById('register1');
+    var ily = document.getElementById('register2');
+
+    avv.style.display = 'block';
+    ily.style.display = 'none';
 }
 
-const form = document.getElementById('form')
-const fullName = document.getElementById('name')
-const email = document.getElementById('email')
-const comment = document.getElementById('komentar')
+//Form Register 1
+const form = document.getElementById('register1')
+const firstName = document.getElementById('firstName')
+const lastName = document.getElementById('lastName')
+const email = document.getElementById('emailAddress')
+const password = document.getElementById('password')
+const confirmpass = document.getElementById('confirmpass')
 const errorElement = document.getElementById('error')
+function capLettValid(str) {     return /[A-Z]/.test(str); }
 
 form.addEventListener('submit', (e) =>{
     let messages = []
-    if(fullName.value ==''){
+    if(firstName.value ==''){
         messages.push('Name is required')
-    } else if(fullName.value.length <3){
-        messages.push('Name required min 3 characters')
     }
-    if (email.value == '' || email.value == null){
+    if(lastName.value ==''){
+        messages.push('Name is required')
+    }
+    if(email.value == '' || email.value == null){
         messages.push('Email is required')
     } else if(email.value.indexOf('@')== -1 || email.value.indexOf('.com') == -1){
         messages.push('Please input the email correctly')
     }
-    if (comment.value.length<3){
-        messages.push('We need more comment, atleast 3 characters, thanks!')
+    if (password.value == '' || password.value == null) {
+        messages.push('Password is required');
+    } else if (password.value.length<8) {
+        messages.push('Password must be atleast 8 character');
+    } else if (!capLettValid(password.value)) {
+        messages.push('Password must have atleast 1 letters and 1 Capital');
+    }
+    if (!(password.value == confirmpass.value)){
+        messages.push('Password & Confirm Password not match')
     }
     if (messages.length > 0){
         e.preventDefault()
@@ -61,6 +87,16 @@ form.addEventListener('submit', (e) =>{
     }
 })
 
+//Form Register 2
+const form2 = document.getElementById('register2')
+const uname = document.getElementById('username')
+const POB = document.getElementById('POB')
+const DOB = document.getElementById('DOB')
+const phone = document.getElementById('phone-number')
+const male = document.getElementById('female')
+const female = document.getElementById('female')
+
+// -------------------------------------------------------------------------------------------------------------------------------------
 function loginvisible(){
     var j = document.getElementById('loginpassword')
     var k = document.getElementById('hide5')
