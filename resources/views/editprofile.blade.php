@@ -13,7 +13,7 @@
 </head>
 <body>
     <nav>
-        <a href="/">
+        <a href="home">
             <img src="image/login/logo.png" class="logo" alt="">
         </a>
         <a href="">

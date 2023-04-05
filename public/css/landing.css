@@ -36,7 +36,7 @@ body{
     margin: 0px 10px;
 }
 
-.login, 
+.login,
 .register{
     width: 127px;
     height: 46px;
@@ -50,12 +50,14 @@ body{
     background: none;
     color: white;
     border: 1px solid white;
+    cursor: pointer;
 }
 
 .register{
     background-color: #0081C9;
     color: white;
     border: none;
+    cursor: pointer;
 }
 
 .login:hover,
@@ -63,6 +65,7 @@ body{
     background-color: #FFC93C;
     color: black;
     transition: .5s;
+    border: transparent;
 }
 
 

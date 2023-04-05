@@ -1,7 +1,9 @@
 <?php
 
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -22,38 +24,30 @@ Route::get('/', function () {
 });
 
 // Home Page
-Route::get('/home', [PostController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index'])->middleware('auth');
 
 // Login Page
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/login', [LoginController::class, 'view'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
 
-// Register Page 1 of 2
-Route::get('/register', function () {
-    return view('register');
-});
-// Register Page 2 of 2
-Route::get('/register-2', function () {
-    return view('register2');
-});
+// Register Page 1 and 2
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
+Route::post('/register', [RegisterController::class, 'store']);
 
 // Report
 Route::get('/report', function () {
     return view('report');
 });
 
-// Edit Profile
-Route::get('/editprofile', function () {
-    return view('editprofile');
+// User profile Page
+Route::get('/userpage', function () {
+    return view('userpage');
 });
+
+// Edit Profile
+Route::get('/edit-profile', [UserController::class, 'index']);
 
 Route::get('/editpassword', function () {
     return view('editpassword');
 });
-
-// Add Post Page
-Route::get('/compose', [PostController::class, 'create']);
-
-// Store Add Post
-Route::post('/store-post', [PostController::class, 'store']);
