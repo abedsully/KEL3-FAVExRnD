@@ -261,17 +261,6 @@ footer img{
     font-size: 5rem;
     margin: 0 0.5vw 4vh 0;
 }
-
-.form-wrapper .image p{
-    display: flex;
-    font-style: normal;
-    color: #0081C9;
-    font-weight: 600;
-    margin: 1vh 0;
-    font-size: 1rem;
-}
-
-
 /* Back and Submit button */
 .form-wrapper .back-submit{
     display: flex;

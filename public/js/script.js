@@ -71,19 +71,19 @@ form.addEventListener('submit', (e) =>{
     } else if(email.value.indexOf('@')== -1 || email.value.indexOf('.com') == -1){
         messages.push('Please input the email correctly')
     }
-    if (password.value == '' || password.value == null) {
-        messages.push('Password is required');
-    } else if (password.value.length<8) {
-        messages.push('Password must be atleast 8 character');
-    } else if (!capLettValid(password.value)) {
-        messages.push('Password must have atleast 1 letters and 1 Capital');
+    if (password.value == '' || password.value == null) {         
+        messages.push('Password is required');     
+    } else if (password.value.length<8) {         
+        messages.push('Password must be atleast 8 character');     
+    } else if (!capLettValid(password.value)) {         
+        messages.push('Password must have atleast 1 letters and 1 Capital');     
     }
     if (!(password.value == confirmpass.value)){
         messages.push('Password & Confirm Password not match')
     }
     if (messages.length > 0){
         e.preventDefault()
-        errorElement.innerText = messages.join(', ')
+        errorElement.innerText = messages.join(', ')    
     }
 })
 

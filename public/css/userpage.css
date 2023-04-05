@@ -4,7 +4,7 @@
     font-family: 'Popins',sans-serif;
 }
 body{
-    background: url("/image/login/background.png");
+    background: url(assets/background.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100vw;
@@ -97,7 +97,7 @@ nav{
 .my-post .my-postingan h3{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;  
     color: #0081C9;
 }
 .my-post .my-postingan hr{
