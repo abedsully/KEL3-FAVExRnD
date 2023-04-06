@@ -18,6 +18,8 @@ class isAdmin
         if(!auth()->check() || !auth()->user()->isAdmin){
             abort('403');
         }
+
+
         return $next($request);
     }
 }
