@@ -39,42 +39,79 @@
 
         <div class="right">
             <h1>Edit Profile</h1>
-            <form>
+            <form action="/edit-profile/{{ $user->id }}" method="POST">
+                @csrf
+                @method('patch')
                 <div class="name">
                     <div class="first-name">
                         <label>First Name</label>
-                        <input type="text" placeholder="Enter your First Name here" value="{{$user->firstName}}">
+                        <input type="text" placeholder="Enter your First Name here" value="{{$user->firstName}}" name="firstName" class="form-control rounded-top @error('firstName') is-invalid @enderror" value="{{ old('firstName' )}}" autofocus/>
+                        @error('firstName')
+                        <div class="invalid-feedback" style="color: red">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
 
                     <div class="last-name">
                         <label>Last Name</label>
-                        <input type="text" placeholder="Enter your First Name here" value="{{$user->lastName}}">
+                        <input type="text" placeholder="Enter your First Name here" value="{{$user->lastName}}" name="lastName" class="form-control rounded-top @error('lastName') is-invalid @enderror" value="{{ old('lastName' )}}" autofocus/>
+                        @error('lastName')
+                        <div class="invalid-feedback" style="color: red">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
                 </div>
                 <div class="email">
                     <label>Email</label>
-                    <input type="email" placeholder="Enter your email here" value="{{$user->email}}">
+                    <input type="email" placeholder="Enter your email here" value="{{$user->email}}" name="email" class="form-control rounded-top @error('email') is-invalid @enderror" value="{{ old('email' )}}" autofocus/>
+                    @error('email')
+                    <div class="invalid-feedback" style="color: red">
+                        {{ $message }}
+                    </div>
+                    @enderror
                 </div>
                 <div class="username">
                     <label>Username</label>
-                    <input type="text" placeholder = "Enter your username here" value="{{$user->username}}">
+                    <input type="text" placeholder = "Enter your username here" value="{{$user->username}}" name="username" class="form-control rounded-top @error('username') is-invalid @enderror" value="{{ old('username' )}}" autofocus/>
+                    @error('username')
+                    <div class="invalid-feedback" style="color: red">
+                        {{ $message }}
+                    </div>
+                    @enderror
                 </div>
                 <div class="birth">
                     <div class="pob">
                         <label>Place Of Birth</label>
-                        <input type="text" placeholder="Enter your place of birth" value="{{$user->place}}">
+                        <input type="text" placeholder="Enter your place of birth" value="{{$user->place}}" name="place" class="form-control rounded-top @error('place') is-invalid @enderror" value="{{ old('place' )}}" autofocus/>
+                        @error('place')
+                        <div class="invalid-feedback" style="color: red">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
                     <div class="dob">
                         <label for="">Date of Birth</label>
-                        <input type="date" value="{{$user->dob}}">
+                        <input type="date" value="{{$user->dob}}" name="dob" class="form-control rounded-top @error('dob') is-invalid @enderror" value="{{ old('dob' )}}" autofocus/>
+                        @error('dob')
+                        <div class="invalid-feedback" style="color: red">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
                 </div>
                 <div class="phone-number">
                     <label for="">Phone Number</label>
-                    <input type="tel" placeholder="+6281234567890" value="{{$user->number}}">
+                    <input type="tel" placeholder="+6281234567890" value="{{$user->number}}" name="number" class="form-control rounded-top @error('number') is-invalid @enderror" value="{{ old('number' )}}" autofocus/>
+                    @error('number')
+                    <div class="invalid-feedback" style="color: red">
+                        {{ $message }}
+                    </div>
+                    @enderror
                 </div>
                 <div id="button">
-                    <button>Save</button>
+                    <button type="submit">Save</button>
                 </div>
             </form>
 

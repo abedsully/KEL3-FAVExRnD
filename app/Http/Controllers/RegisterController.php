@@ -33,23 +33,44 @@ class RegisterController extends Controller
         return redirect('/login');
     }
 
-    public function edit(){
-        $users = User::all();
-
-
-        return view('showusers', compact('users'));
-    }
-
-    public function show($id){
+    public function showProf($id){
         $user = User::findOrFail($id);
         $this->middleware('auth.session');
         return view('editprofile', compact('user'));
     }
 
-    public function show2($id){
+    public function showPass($id){
         $user = User::findOrFail($id);
         $this->middleware('auth.session');
         return view('editpassword', compact('user'));
     }
+
+
+    public function updateProf(Request $request, $id){
+
+        User::findOrFail($id)->update([
+            'firstName' => $request->firstName,
+            'lastName' => $request->lastName,
+            'email' => $request->email,
+            'username' => $request->username,
+            'place' => $request->place,
+            'dob' => $request->dob,
+            'number' => $request->number
+        ]);
+        return redirect('/edit-success');
+    }
+
+    public function updatePass(Request $request, $id){
+        User::findOrFail($id)->update([
+            'password' => $request->password,
+            'confirm' => $request->confirm
+        ]);
+        return redirect('/edit-success');
+    }
+
+    public function success(){
+        return view('editsuccess');
+    }
+
 
 }
