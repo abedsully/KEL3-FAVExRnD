@@ -33,4 +33,23 @@ class RegisterController extends Controller
         return redirect('/login');
     }
 
+    public function edit(){
+        $users = User::all();
+
+
+        return view('showusers', compact('users'));
+    }
+
+    public function show($id){
+        $user = User::findOrFail($id);
+        $this->middleware('auth.session');
+        return view('editprofile', compact('user'));
+    }
+
+    public function show2($id){
+        $user = User::findOrFail($id);
+        $this->middleware('auth.session');
+        return view('editpassword', compact('user'));
+    }
+
 }

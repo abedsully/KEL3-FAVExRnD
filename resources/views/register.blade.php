@@ -151,7 +151,7 @@
                     </div>
                 </div>
             </nav>
-        </form>
+            </form>
         </section>
         <footer>
             <img src="../image/register/Footer.png" alt="template footer">
