@@ -1,10 +1,10 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Popins',sans-serif;
+    font-family: 'Poppins',sans-serif;
 }
 body{
-    background: url(assets/background.png);
+    background: url(../image/register/Template.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100vw;
@@ -22,41 +22,46 @@ nav{
 .navbar .logo{
     display: flex;
     justify-content: flex-start;
-    width: 186px;
+    width: 15vw;
     padding: 1vh 1.5vw;
 }
 .navbar .profile-picture{
     display: flex;
     justify-content: flex-end;
-    width: 56px;
-    padding: 1vh 1.5vw;
+    width: 5vw;
+    padding: 1vh 5vw;
 }
+
 /* User Profile */
 .user-profile{
     display: flex;
-    width: 70vw;
-    height: 30vh;
-    margin: 4vh 15vw;
+    flex-direction: column;
+    width: 25vw;
+    height: 60vh;
+    margin: 5vh 2.5vw 0 12.5vw;
     border-radius: 15px;
     background-color: #FFFFFF;
+    box-shadow: 0 0 16px black;
 }
 .user-profile .pp{
     display: flex;
-    width: 180px;
-    margin: 1vh 0 0 1vw;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 32.5vh;
+    margin: 2.5vh 2.5vw 0 2.5vw;
 }
 .user-profile .pp img{
     display: flex;
-    margin: 2.5vh 1vw;
-    width: 180px;
-    height: 180px;
+    width: 18vw;
+    height: 18vw;
 }
 .user-profile .user-info h2{
     display: flex;
     font-style: normal;
     font-weight: 500;
     font-size: 38px;
-    margin: 6vh 0 0 2.5vw;
+    margin: 1vh 0 0 2.5vw;
 }
 .user-profile .user-info p{
     display: flex;
@@ -66,7 +71,6 @@ nav{
     color: #707070;
     margin: 0.5vh 2.5vw 2.5vh 2.5vw;
 }
-
 .user-profile .user-info .style-button button{
     display: flex;
     background-color: #FFC93C;
@@ -85,25 +89,106 @@ nav{
     margin: 0 0.25vw 0 0;
 }
 
+/* user-post-wrapper */
+.user-post-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
 /* MyPost */
 .my-post{
-    width: 66vw;
-    height: 100vh;
-    margin: 4vh 15vw;
+    width: 46vw;
+    height: 115vh;
+    margin: 5vh 12.5vw 5vh 0;
     border-radius: 15px;
     background-color: #FFFFFF;
     padding: 1vh 2vw 0 2vw;
+    box-shadow: 0 0 16px black;
 }
 .my-post .my-postingan h3{
     display: flex;
     justify-content: center;
     align-items: center;  
     color: #0081C9;
+    font-weight: 500;
+    margin: 1vh 0;
 }
 .my-post .my-postingan hr{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+.my-post .post-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 43vw;
+    margin: 3vh 1.5vw;
+    height: 100vh;
+    border-radius: 15px;
+    box-shadow: 0 0 5px black;
+    background-color: #1A3341;
+}
 
+/* post-wrapper 1 */
+.my-post .post-wrapper .wrapper1{
+    background-color: #FFFFFF;
+    width: 38vw;
+    height: 30vh;
+    margin: 3vh 1.5vw 0 1.5vw;
+    border-radius: 15px;
+    padding: 0 1vw;
+}
+.my-post .post-wrapper .wrapper1 .informasi{
+    display: flex;
+}
+.my-post .post-wrapper .wrapper1 .informasi img{
+    display: flex;
+    width: 56px;
+    height: 56px;
+    margin: 1.5vh 1vw 1.5vh 0;
+}
+.my-post .post-wrapper .wrapper1 .informasi p{
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 3vh 0 0 0.25vw;
+}
+.my-post .post-wrapper .wrapper1 .text1 p{
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+.my-post .post-wrapper p{
+    display: flex;
+    justify-content: left;
+    text-align: justify;
+    margin: 1vh 1vw 0 0;
+}
+
+/* post-wrapper 2 */
+.my-post .post-wrapper .wrapper2{
+    background-color: #FFFFFF;
+    width: 40vw;
+    height: 57.5vh;
+    margin: 3vh 1.5vw;
+    border-radius: 15px;
+
+}
+.my-post .post-wrapper .wrapper2 .informasi{
+    display: flex;
+}
+.my-post .post-wrapper .wrapper2 .informasi img{
+    display: flex;
+    width: 56px;
+    height: 56px;
+    margin: 1.5vh 1vw 1.5vh 1.5vw;
+}
+.my-post .post-wrapper .wrapper2 .informasi p{
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 3vh 0 0 0.25vw;
+}
+.my-post .post-wrapper .wrapper2 img{
+    width: 40vw;
 }
