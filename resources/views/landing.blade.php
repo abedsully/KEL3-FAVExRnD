@@ -24,7 +24,7 @@
         </a>
         @auth()
             <div class="register-button">
-                <a href="/home">
+                <a href="/home/{{auth()->user()->id}}">
                     <button class = "register">Return Home</button>
                 </a>
             </div>

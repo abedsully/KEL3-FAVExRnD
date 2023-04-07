@@ -19,52 +19,18 @@ nav{
     padding: 10px;
 }
 
-.profile-pitcure{
+.profile-picture{
     width: 56px;
     height: 56px;
-    border-radius: 50%;
+    border-radius: 60px;
     margin-right: 32px;
 }
-
-.password .visibility i{
-    position: absolute;
-    top: 185px;
-    left: 1060px;
-    cursor: pointer;
-}
-
-#hide1{
-    display: none;
-}
-
-.password .visibility3 i{
-    position: absolute;
-    top: 278px;
-    left: 1060px;
-    cursor: pointer;
-}
-
-#hide3{
-    display: none;
-}
-
-.password .visibility4 i{
-    position: absolute;
-    top: 373px;
-    left: 1060px;
-    cursor: pointer;
-}
-
-#hide5{
-    display: none;
-}
-
 
 .center{
     display: flex;
     flex-direction: row;
     position: absolute;
-    top: 65%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     gap: 30px;
@@ -77,65 +43,38 @@ nav{
     border-radius: 30px;
     padding: 20px;
     box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.25);
-    height: 200px;
-    width: 300px;
+    height: 420px;
+    width: 410px;
+    align-items: center;
 }
 
-.profile{
+.left img{
+    width: 277px;
+    border-radius: 150px;
+}
+
+.content{
+    width: 270px;
     display: flex;
     flex-direction: row;
-    gap: 8px;
-}
-
-.profile img{
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-}
-
-.profile-content h2{
-    font-size: 18px;
-    font-weight: 500;
-    margin-top: 13px;
-}
-
-.content-password{
-    display: flex;
-    flex-direction: row;
+    gap: 40px;
+    align-items: center;
     justify-content: space-between;
+    margin-top: 10px;
 }
 
-.content-password a{
-    text-decoration: none;
-    font-family: 'Poppins';
-    font-style: normal;
+.content h1{
     font-weight: 500;
-    font-size: 12px;
-    color: #5BC0F8;
-    text-decoration-line: underline;
+    font-size: 30px;
 }
 
-.profile-section{
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 16px;
-    padding-top: 28px;
-    color: #828282;
+.content img{
+    width: 47px;
+    height: 47px;
 }
 
-.password-section{
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 16px;
-    padding-top: 12px;
-    color: #FABE22;
-    text-decoration: underline;
-}
-
-.profile img{
-    width: 56px;
-    height: 56px;
-    border-radius: 60px;
+.post{
+    width: 270px;
 }
 
 .right{
@@ -149,6 +88,12 @@ nav{
 }
 
 .right form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.birth{
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -195,8 +140,42 @@ form input{
     font-family: 'Poppins', sans-serif;
 }
 
-form input::placeholder{
-    color: #828282;
+.email{
+    display: flex;
+    flex-direction: column;
+}
+
+.username{
+    display: flex;
+    flex-direction: column;
+}
+
+.birth{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pob{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.dob{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.pob select{
+    border-radius: 8px;
+    padding: 10px;
+    margin: 6px 0px 10px 0px;
+    border: 2px solid #E3E3E3;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
 }
 
 #button{
@@ -228,7 +207,7 @@ form input::placeholder{
 
 footer img{
     position: absolute;
-    top: 90%;
+    top: 110%;
     width: 100%;
     z-index: -1;
 }

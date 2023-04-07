@@ -27,12 +27,12 @@ class RegisterController extends Controller
             'gender' => 'required'
 
         ]);
-            $filename = NULL;
+            $filenames = NULL;
+
             if($request->file('image') != NULL){
                 $extension = $request->file('image')->getClientOriginalExtension();
                 $filenames = $request->firstName.'_'.$extension;
-                $request->file('image')->storeAs('/public/storage/Barang', $filenames);
-
+                $request->file('image')->storeAs('/public/Barang', $filenames);
             }
 
 
@@ -53,12 +53,12 @@ class RegisterController extends Controller
         return redirect('/login');
     }
 
-    public function showProf($id){
+    public function showProfile($id){
         $user = User::findOrFail($id);
         return view('editprofile', compact('user'));
     }
 
-    public function showPass($id){
+    public function showPassword($id){
         $user = User::findOrFail($id);
         return view('editpassword', compact('user'));
     }
@@ -136,5 +136,27 @@ class RegisterController extends Controller
 
         return back()->with('success', 'Password updated successfully');
     }
+
+    public function updateProfilePicture(Request $request, $id)
+{
+    $user = User::findOrFail($id);
+
+    if ($request->hasFile('image')) {
+        // Get the uploaded file
+        $file = $request->file('image');
+
+        // Generate a unique filename for the uploaded file
+        $filename = $user->id . '_' . $file->getClientOriginalExtension();
+
+        // Store the uploaded file in the storage directory
+        $file->storeAs('public/Barang', $filename);
+
+        // Update the user's profile picture path in the database
+        $user->image = $filename;
+        $user->save();
+    }
+
+    return redirect()->back();
+}
 
 }

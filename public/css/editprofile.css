@@ -19,6 +19,13 @@ nav{
     padding: 10px;
 }
 
+.profile-pitcure{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin-right: 32px;
+}
+
 .profile-picture{
     width: 56px;
     height: 56px;
@@ -43,7 +50,7 @@ nav{
     border-radius: 30px;
     padding: 20px;
     box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.25);
-    height: 200px;
+    height: 220px;
     width: 300px;
 }
 
@@ -84,7 +91,7 @@ nav{
 .profile img{
     width: 56px;
     height: 56px;
-    border-radius: 60px;
+    border-radius: 50%;
 }
 
 .profile-content label{
