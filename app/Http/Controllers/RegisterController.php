@@ -136,6 +136,7 @@ class RegisterController extends Controller
 
         return back()->with('success', 'Password updated successfully');
     }
+<<<<<<< HEAD
 
     public function updateProfilePicture(Request $request, $id)
 {
@@ -160,3 +161,6 @@ class RegisterController extends Controller
 }
 
 }
+=======
+}
+>>>>>>> refs/remotes/origin/main

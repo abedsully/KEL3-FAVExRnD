@@ -34,6 +34,8 @@ body{
     color: #0081C9;
     text-align: center;
     margin: 0px 0px 6px 0px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
 }
 
 .center p{
@@ -88,7 +90,7 @@ body{
 
 .usernamepass .visibility i{
     position: absolute;
-    top: 288px;
+    top: 283px;
     left: 575px;
     cursor: pointer;
 }
