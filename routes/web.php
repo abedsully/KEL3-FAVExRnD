@@ -46,9 +46,7 @@ Route::get('/userpage', function () {
 });
 
 // Edit Profile
-Route::get('/edit-profile/{id}', [RegisterController::class, 'showProf'])->middleware('auth');
-Route::get('/edit-password/{id}', [RegisterController::class, 'showPass'])->middleware('auth');
-Route::patch('/edit-profile/{id}', [RegisterController::class, 'updateProf'])->middleware('auth');
-Route::patch('/edit-password/{id}', [RegisterController::class, 'updatePass'])->middleware(('auth'));
-
-Route::get('/edit-success', [RegisterController::class, 'success']);
+Route::get('/edit-profile/{id}', [RegisterController::class, 'showProf'])->middleware('checkUserId');
+Route::get('/edit-password/{id}', [RegisterController::class, 'showPass'])->middleware('checkUserId');
+Route::patch('/edit-profile/{id}', [RegisterController::class, 'updateProf'])->middleware('checkUserId');
+Route::post('/edit-password/{id}', [RegisterController::class, 'updatePass'])->middleware('checkUserId');
