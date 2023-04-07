@@ -181,9 +181,14 @@
                             <button type="submit">Submit</button>
                         </div>
                     </div>
+<<<<<<< HEAD
+                </nav>
+            </form>    
+=======
                 </div>
             </nav>
             </form>
+>>>>>>> 8295357e1168b5a8e2a43c5719fcf8d06afc1638
         </section>
         <footer>
             <img src="image/login/Footer.png" alt="">
