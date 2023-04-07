@@ -315,3 +315,9 @@ footer img{
     position: relative;
     display: none;
 }
+
+footer img{
+    width: 100;
+    z-index: -1;
+    bottom: 0;
+}
