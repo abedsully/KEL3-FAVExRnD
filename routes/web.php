@@ -3,53 +3,63 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
-// Landing Page
+// Show Landing Page
 Route::get('/', function () {
     return view('landing');
 });
 
-// Home Page
-Route::get('/home', [HomeController::class, 'index'])->middleware('auth');
+// Show Home Page
+Route::get('/home/{id}', [HomeController::class, 'index'])->middleware('checkUserId');
 
-// Login Page
+// Show Login Page
 Route::get('/login', [LoginController::class, 'view'])->name('login')->middleware('guest');
+
+// Authenticate Login
 Route::post('/login', [LoginController::class, 'authenticate']);
+
+// Log Out Button
 Route::post('/logout', [LoginController::class, 'logout']);
 
-// Register Page 1 and 2
+// Show Register Page
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
+
+// Store Register Page's Data
 Route::post('/register', [RegisterController::class, 'store']);
 
-// Report
+// Show Report Page
 Route::get('/report', function () {
     return view('report');
 });
 
-// User profile Page
+// Show Userpage Page
 Route::get('/userpage', function () {
     return view('userpage');
 });
 
-// Edit Profile
-Route::get('/show-users', [RegisterController::class, 'edit'])->middleware('auth')->middleware('isAdmin');
-Route::get('/edit-profile/{id}', [RegisterController::class, 'show'])->name('edit')->middleware('auth.session');
-Route::get('/edit-password/{id}', [RegisterController::class, 'show2'])->name('edit2')->middleware('auth.session');
+// Show Edit Profile Page
+Route::get('/edit-profile/{id}', [RegisterController::class, 'showProfile'])->middleware('checkUserId');
 
-Route::get('/editpassword', function () {
-    return view('editpassword');
+// Show Edit Password Page
+Route::get('/edit-password/{id}', [RegisterController::class, 'showPassword'])->middleware('checkUserId');
+
+// Edit Profile
+Route::patch('/edit-profile/{id}', [RegisterController::class, 'updateProf'])->middleware('checkUserId');
+
+// Edit Password
+Route::post('/edit-password/{id}', [RegisterController::class, 'updatePass'])->middleware('checkUserId');
+
+// Edit Profile Picture
+Route::post('/update-profile-picture/{id}', [RegisterController::class, 'updateProfilePicture'])->name('update-profile-picture');
+
+
+// View Profile
+Route::get('/view-profile', function (){
+    return view('viewprofile');
 });
+
+Route::get('/edit-user', function (){
+    return view('edituserprofile');
+});
+

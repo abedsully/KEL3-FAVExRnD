@@ -1,258 +1,272 @@
 *{
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 body{
-  background: url(assets/Template.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 170vh;
-  overflow-x: hidden;
+    background-image: url("/image/login/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 170vh;
+    overflow-x: hidden;
 }
 /* Navigation Bar */
 nav{
-  display: flex;
-  position: sticky;
-  justify-content: space-between;
-  background-color: #0D2A39;
-  width: 100vw;
-  height: 10vh;
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    background-color: #0D2A39;
+    width: 100vw;
+    height: 12vh;
 }
 .navbar .logo{
-  display: flex;
-  justify-content: flex-start;
-  width: 15vw;
-  padding: 1vh 1.5vw;
+    display: flex;
+    justify-content: flex-start;
+    width: 15vw;
+    padding: 1.5vh 1.5vw;
 }
 .navbar .profile-picture{
-  display: flex;
-  justify-content: flex-end;
-  width: 5vw;
-  padding: 1vh 5vw;
+    display: flex;
+    justify-content: flex-end;
+    width: 5vw;
+    padding: 1vh 2vw;
+}
+
+.navbar .profile-picture img{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin-right: 32px;
+}
+
+
+.dropdown-menu-right{
+    right: 0;
+    left: auto;
 }
 /* background page */
 .wrapper-page{
-  display: flex;
-  flex-direction: column;
-  width: 50vw;
-  height: 125vh;
-  margin: 5vh 25vw;
-  background-color: #0D2A39;
-  border-radius: 30px;
-  box-shadow: 0 0 16px black;
-  overflow-y: auto;
-  overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: 125vh;
+    margin: 5vh 25vw;
+    background-color: #0D2A39;
+    border-radius: 30px;
+    box-shadow: 0 0 16px black;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 .wrapper-page .write-post{
-  display: flex;
-  width: 44vw;
-  height: 10vh;
-  margin: 4vh 3vw;
-  border-radius: 15px;
-  background-color: #FFFFFF;
+    display: flex;
+    width: 44vw;
+    height: 10vh;
+    margin: 4vh 3vw;
+    border-radius: 15px;
+    background-color: #FFFFFF;
 }
 .wrapper-page .write-post img{
-  display: flex;
-  width: 56px;
-  height: 56px;
-  margin: 1.5vh 1.5vw 1.5vh 2vw;
+    display: flex;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin: 1.5vh 1.5vw 1.5vh 2vw;
 }
 .wrapper-page .write-post input{
-  display: flex;
-  height: 8vh;
-  width: 30vw;
-  margin: 1vh 0;
-  border-radius: 30px;
-  background-color: #F1F1F1;
-  font-size: 1.2rem;
-  color: #707070;
-  border: none;
-  padding: 0 0 0 2vw;
+    display: flex;
+    height: 8vh;
+    width: 30vw;
+    margin: 1vh 0;
+    border-radius: 30px;
+    background-color: #F1F1F1;
+    font-size: 1.2rem;
+    color: #707070;
+    border: none;
+    padding: 0 0 0 2vw;
 }
 /* Postingan Barron */
 .wrapper-page .post-1{
-  background-color: #FFFFFF;
-  width: 40vw;
-  height: 28vh;
-  border-radius: 15px;
-  margin: 0 3vw;
-  padding: 1vh 2vw;
+    background-color: #FFFFFF;
+    width: 40vw;
+    height: 28vh;
+    border-radius: 15px;
+    margin: 0 3vw;
+    padding: 1vh 2vw;
 }
 .wrapper-page .post-1 .informasi{
-  display: flex;
+    display: flex;
 }
 .wrapper-page .post-1 .informasi img{
-  display: flex;
-  width: 56px;
-  height: 56px;
-  margin: 1.5vh 1vw 1.5vh 0;
+    display: flex;
+    width: 56px;
+    height: 56px;
+    margin: 1.5vh 1vw 1.5vh 0;
 }
 .wrapper-page .post-1 .informasi p{
-  display: flex;
-  font-size: 1.25rem;
-  font-weight: 500;
-  margin: 3vh 0 0 0.25vw;
+    display: flex;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 3vh 0 0 0.25vw;
 }
 .wrapper-page .post-1 .text1 p{
-  font-size: 1.1rem;
-  font-weight: normal;
+    font-size: 1.1rem;
+    font-weight: normal;
 }
 .wrapper-page .post-1 p{
-  display: flex;
-  justify-content: left;
-  text-align: justify;
-  margin: 1vh 1vw 0 0;
+    display: flex;
+    justify-content: left;
+    text-align: justify;
+    margin: 1vh 1vw 0 0;
 }
 /* Postingan GNUguru */
 .wrapper-page .post-2{
-  background-color: #FFFFFF;
-  width: 44vw;
-  height: 67.5vh;
-  margin: 3vh 3vw 3vh 3vw;
-  border-radius: 15px;
+    background-color: #FFFFFF;
+    width: 44vw;
+    height: 67.5vh;
+    margin: 3vh 3vw 3vh 3vw;
+    border-radius: 15px;
 }
 .wrapper-page .post-2 .informasi{
-  display: flex;
+    display: flex;
 }
 .wrapper-page .post-2 .informasi img{
-  display: flex;
-  width: 56px;
-  height: 56px;
-  margin: 1.5vh 1vw 1.5vh 1.5vw;
+    display: flex;
+    width: 56px;
+    height: 56px;
+    margin: 1.5vh 1vw 1.5vh 1.5vw;
 }
 .wrapper-page .post-2 .informasi p{
-  display: flex;
-  font-size: 1.25rem;
-  font-weight: 500;
-  margin: 3vh 0 0 0.25vw;
+    display: flex;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 3vh 0 0 0.25vw;
 }
 .wrapper-page .post-2 img{
-  width: 44vw;
+    width: 44vw;
 }
 /* Pop Up */
 #popUp{
-  visibility: hidden;
+    visibility: hidden;
 }
 .pop-up{
-  position: absolute;
-  background-color: black;
-  background: rgba(0, 0, 0, 0.5);
-  background-blend-mode: darken;
-  background-position: center;
-  background-size: cover;
-  height: 170vh;
-  width: 100vw;
-  top: 0%;
+    position: absolute;
+    background-color: black;
+    background: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
+    height: 170vh;
+    width: 100vw;
+    top: 0%;
 }
 .pop-up .wrapper-post{
-  align-items: center;
-  justify-content: center;
-  border-radius: 30px;
-  width: 34vw;
-  height: 72.5vh;
-  margin: 20vh 30vw 0 30vw;
-  padding: 2vh 3vw;
-  background-color: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    width: 34vw;
+    height: 72.5vh;
+    margin: 20vh 30vw 0 30vw;
+    padding: 2vh 3vw;
+    background-color: white;
 }
 /* Information Profile (Name, Profile Picture) */
 .wrapper-post .info-profile{
-  display: flex;
-  width: 100%;
-  padding: 1.5vh 0;
+    display: flex;
+    width: 100%;
+    padding: 1.5vh 0;
 }
 .wrapper-post h1{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  color:#0081C9;
-  font-weight: 700;
-  margin: 3vh 0 2vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color:#0081C9;
+    font-weight: 700;
+    margin: 3vh 0 2vh 0;
 }
 .wrapper-post .info-profile img{
-  display: flex;
-  width: 56px;
-  padding: 0 1vw 0 0;
+    display: flex;
+    width: 56px;
+    padding: 0 1vw 0 0;
 }
 .wrapper-post .info-profile p{
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1.25rem;
-  margin: 2vh 0
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: 2vh 0
 }
 /* Konten yang akan di post */
 .wrapper-post .forum{
-  width: 32vw;
-  height: 45vh;
+    width: 32vw;
+    height: 45vh;
 }
 .wrapper-post .forum .post-desc textarea{
-  display: flex;
-  align-items: flex-start;
-  justify-content: left;
-  background-color: #F1F1F1;
-  color: #707070;
-  width: 32vw;
-  height: 30vh;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.15rem;
-  border: none;
-  border-radius: 15px;
-  margin: 1.5vh 0 1.5vh 0;
-  padding: 1.5vh 1vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    background-color: #F1F1F1;
+    color: #707070;
+    width: 32vw;
+    height: 30vh;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.15rem;
+    border: none;
+    border-radius: 15px;
+    margin: 1.5vh 0 1.5vh 0;
+    padding: 1.5vh 1vw;
 }
 .wrapper-post .forum .post-title input{
-  display: flex;
-  background-color: #F1F1F1;
-  color: #707070;
-  width: 32vw;
-  height: 6vh;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.15rem;
-  text-align: justify;
-  border: none;
-  border-radius: 15px;
-  margin: 0.5vh 0 2vh 0;
-  padding: 0 1vw;
+    display: flex;
+    background-color: #F1F1F1;
+    color: #707070;
+    width: 32vw;
+    height: 6vh;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.15rem;
+    text-align: justify;
+    border: none;
+    border-radius: 15px;
+    margin: 0.5vh 0 2vh 0;
+    padding: 0 1vw;
 }
 /* Submit and choose files */
 .wrapper-post .post-btn button{
-  font-style: normal;
-  font-weight: 600;
-  font-size: 15px;
-  padding: 0 13vw;
-  height: 6.5vh;
-  border-radius: 8px;
-  border: none;
-  margin: 1vh 0;
-  background-color: #FFC93C;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 0 13vw;
+    height: 6.5vh;
+    border-radius: 8px;
+    border: none;
+    margin: 1vh 0;
+    background-color: #FFC93C;
 }
 .wrapper-post .post-btn button:hover{
-  animation: ease-in;
-  animation-duration: 2s;
-  background-color:#0081C9;
-  color: #F1F1F1;
+    animation: ease-in;
+    animation-duration: 2s;
+    background-color:#0081C9;
+    color: #F1F1F1;
 }
 .wrapper-post .post-btn{
-  display: flex;
-  text-align: center;
+    display: flex;
+    text-align: center;
 }
 .wrapper-post .post-btn .post-file i{
-  display: flex;
-  justify-content: center;
-  margin: 1vh 1vw;
-  width: 2vw;
-  height: 4.5vh;
-  font-size: 32px;
-  padding: 0.75vh 0.5vw;
-  border-radius: 48px;
-  background-color: #E6E6E6;
+    display: flex;
+    justify-content: center;
+    margin: 1vh 1vw;
+    width: 2vw;
+    height: 4.5vh;
+    font-size: 32px;
+    padding: 0.75vh 0.5vw;
+    border-radius: 48px;
+    background-color: #E6E6E6;
 }
 /* footer */
 footer img{
-  display: flex;
-  width: 100vw;
+    display: flex;
+    width: 100vw;
 }

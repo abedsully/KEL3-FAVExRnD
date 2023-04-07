@@ -20,8 +20,11 @@ class LoginController extends Controller
 
         if(Auth::attempt($user)){
             $request->session()->regenerate();
-            return redirect()->intended('/home');
+            $userId = Auth::id();
+
+            return redirect('/home/' . $userId);
         }
+
 
         return back()->with('loginError', 'Login Failed!');
     }
