@@ -1,10 +1,10 @@
 console.log('test')
 
 function openPopUp(){
-    const popUp = document.getElementById('popUp')
-    popUp.style.visibility = visible
+    var popUp = document.getElementById('popUp')
+    popUp.style.display = 'block'
 }
 function closePopUp(){
-    const popUp = document.getElementById('popUp')
-        popUp.style.visibility = hidden
+    var popUp = document.getElementById('popUp')
+        popUp.style.display = 'none'
 }

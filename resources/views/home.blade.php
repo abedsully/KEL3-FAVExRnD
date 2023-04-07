@@ -19,8 +19,6 @@
             <div class="logo">
                 <a href="/home/{{$user->id}}"><img src="{{url('/image/login/logo.png')}}" alt="Company Logo"></a>
             </div>
-
-
             <div class="profile-picture">
                 <a href="/">
                     <div class="nav-item dropdown">
@@ -51,11 +49,11 @@
                     <img class="profile-pitcure" src="{{url('/image/login/ProfilePitcure.webp')}}" alt="Image"/>
                 @endif
                 <input type="text" placeholder="Write your post here..." onclick="openPopUp()">
-                <img src={{url('/image/login/file-icon.png')}} alt="upload file" onclick="openPopUp()">
+                <img src="{{url('/image/login/file-icon.png')}}" alt="upload file" onclick="openPopUp()">
             </div>
             <div class="post-1">
                 <div class="informasi">
-                    <img src="assets/Baron.png" alt="Profile foto">
+                    <img src="{{url('image/home/Baron.png')}}" alt="Profile foto">
                     <p>Blockchain “Baron”</p>
                 </div>
                 <div class="text1" id="post-1">
@@ -65,12 +63,22 @@
             </div>
             <div class="post-2">
                 <div class="informasi">
-                    <img src="assets/Guru.png" alt="Profile foto">
+                    <img src="{{url('image/home/Guru.png')}}" alt="Profile foto">
                     <p>GNUguru</p>
                 </div>
                 <div class="text1" id="post-2">
                     <hr>
-                    <img src="assets/Posted.png" alt="postingan ">
+                    <img src="{{url('image/home/Posted.png')}}" alt="postingan ">
+                </div>
+            </div>
+            <div class="post-1">
+                <div class="informasi">
+                    <img src="{{url('image/home/Baron.png')}}" alt="Profile foto">
+                    <p>Blockchain “Baron”</p>
+                </div>
+                <div class="text1" id="post-1">
+                    <hr>
+                    <p>Ini hanyalah contoh postingan ke 3. Postingan ini dibuat dengan tujuan menunjukkan overflow-y pada tampilan</p>
                 </div>
             </div>
         </section>
@@ -85,7 +93,7 @@
                     <h1>New Post</h1>
                     <hr>
                 <div class="info-profile">
-                    <img src="assets/pp.png" alt="your profile picture">
+                    <img src="{{url('/image/home/pp.png')}}" alt="your profile picture">
                     <p>Mr. Chadest</p>
                 </div>
                 <form action="" method="get" class="forum">

@@ -123,11 +123,13 @@ nav{
     display: flex;
     flex-direction: column;
     width: 43vw;
-    margin: 3vh 1.5vw;
+    margin: 3vh 0.5vw;
     height: 100vh;
     border-radius: 15px;
     box-shadow: 0 0 5px black;
     background-color: #1A3341;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 /* post-wrapper 1 */
@@ -135,7 +137,7 @@ nav{
     background-color: #FFFFFF;
     width: 38vw;
     height: 30vh;
-    margin: 3vh 1.5vw 0 1.5vw;
+    margin: 3vh 1.5vw 1.5vh 1.5vw;
     border-radius: 15px;
     padding: 0 1vw;
 }
@@ -170,7 +172,7 @@ nav{
     background-color: #FFFFFF;
     width: 40vw;
     height: 57.5vh;
-    margin: 3vh 1.5vw;
+    margin: 1.5vh 1.5vw 0 1.5vw;
     border-radius: 15px;
 
 }
@@ -181,7 +183,7 @@ nav{
     display: flex;
     width: 56px;
     height: 56px;
-    margin: 1.5vh 1vw 1.5vh 1.5vw;
+    margin: 1.5vh 1vw 0 1.5vw;
 }
 .my-post .post-wrapper .wrapper2 .informasi p{
     display: flex;
@@ -191,4 +193,10 @@ nav{
 }
 .my-post .post-wrapper .wrapper2 img{
     width: 40vw;
+}
+
+/* Footer */
+footer img{
+    display: flex;
+    width: 100vw;
 }

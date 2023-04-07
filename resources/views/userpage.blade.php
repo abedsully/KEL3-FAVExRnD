@@ -57,9 +57,22 @@
                         </div>
                             <img src="image/userpage/postingan.png" alt="post-1">
                     </div>
+                    <div class="wrapper1">
+                        <div class="informasi">
+                            <img src="image/userpage/pp2.png" alt="Profile foto"> 
+                            <p>Mr. Chadest</p>
+                        </div>
+                        <div class="text1" id="post-1">
+                            <hr>
+                            <p>Ini hanyalah contoh postingan ke 3. Postingan ini dibuat dengan tujuan menunjukkan overflow-y pada tampilan</p>
+                        </div>
+                    </div>
                 </div>
             </aside>
         </div>
+        <footer>
+            <img src="{{url('/image/login/Footer.png')}}"  alt="Footer">
+        </footer>
     </body>
     <script src="https://kit.fontawesome.com/ca8cef09e9.js" crossorigin="anonymous"></script>
 </html>
