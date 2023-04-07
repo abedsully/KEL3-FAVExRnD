@@ -28,6 +28,7 @@ class User extends Authenticatable
         'dob',
         'number',
         'gender',
+        'image',
     ];
 
     /**

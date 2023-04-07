@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('dob');
             $table->string('number');
             $table->string('gender');
+            $table->string('image')->nullable();
             $table->boolean('isAdmin')->default(0);
             $table->rememberToken();
             $table->timestamps();

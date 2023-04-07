@@ -12,26 +12,37 @@
     </style>
         <title>Edit Profile • Favebook </title>
 </head>
+@auth
+
+
 <body>
     <nav>
-        <a href="home">
+        <a href="/">
             <img src="image/login/logo.png" class="logo" alt="">
         </a>
         <a href="">
-            <img class = "profile-picture" src="image/login/ProfilePitcure.webp" alt="">
+            <img class = "profile-pitcure" src="image/login/Rin.jpg" alt="">
         </a>
     </nav>
 
     <div class="center">
         <div class="left">
             <div class="profile">
-                <img src="image/login/ProfilePitcure.webp" alt="">
+
+                <img src="auth()->user()->image" alt="">
                 <div class = "profile-content">
                     <h2>Username</h2>
-                    <label for="file-upload" class="change-profile-picture">
-                        Change Profile Photo
-                    </label>
-                    <input id="file-upload" type="file">
+                    <form action="" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <label for="file-upload" class="change-profile-picture">
+                            Change Profile Photo
+                        </label>
+
+                        <input id="file-upload" type="file" name="image">
+<br>
+                        <button type="submit" class="change-profile-picture">Submit</button>
+                    </form>
+
                 </div>
             </div>
             <a class="profile-section" href="/edit-profile/{{$user->id}}">Profile</a>
@@ -126,6 +137,7 @@
 
         </div>
     </div>
+    @endauth
 
     <footer>
         <img src="image/login/Footer.png" alt="">

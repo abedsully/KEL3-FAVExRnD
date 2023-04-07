@@ -24,8 +24,8 @@
                 <h1>Register</h1>
                 <p>Welcome to favebook! Let’s get started. </p>
             </div>
-            <form action="/register" method="POST">
-
+            <form action="/register" method="POST" enctype="multipart/form-data">
+                @csrf
             <nav class="form" autocomplete="off" id="register1">
                 <div class="first-last">
                     <div class="first-name">
@@ -90,7 +90,6 @@
 
             <!-- Register II -->
             <nav class="form2" id="register2" autocomplete="off" >
-                @csrf
                 <div class="u-name">
                     <label for="username">Username</label>
                     <input type="text" placeholder="Enter your username here" id="username" name="username" class="form-control rounded-top @error('username') is-invalid @enderror" value="{{ old('username' )}}" autofocus/>
@@ -140,6 +139,10 @@
                     <label for="female">Female</label>
                     <input type="radio" name="gender" id="male" value="male" checked>
                     <label for="male">Male</label>
+                </div>
+                <div class="image">
+                    <label for="image">Profile Picture (Optional)</label> <br>
+                    <input type="file" name="image">
                 </div>
 
                 <div class="back-submit">

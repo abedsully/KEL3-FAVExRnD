@@ -3,7 +3,6 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -50,3 +49,5 @@ Route::get('/edit-profile/{id}', [RegisterController::class, 'showProf'])->middl
 Route::get('/edit-password/{id}', [RegisterController::class, 'showPass'])->middleware('checkUserId');
 Route::patch('/edit-profile/{id}', [RegisterController::class, 'updateProf'])->middleware('checkUserId');
 Route::post('/edit-password/{id}', [RegisterController::class, 'updatePass'])->middleware('checkUserId');
+
+
