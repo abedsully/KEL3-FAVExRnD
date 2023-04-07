@@ -45,7 +45,6 @@ Route::get('/edit-profile/{id}', [RegisterController::class, 'showProfile'])->mi
 Route::get('/edit-password/{id}', [RegisterController::class, 'showPassword'])->middleware('checkUserId');
 
 // Edit Profile
-<<<<<<< HEAD
 Route::patch('/edit-profile/{id}', [RegisterController::class, 'updateProf'])->middleware('checkUserId');
 
 // Edit Password
@@ -64,7 +63,6 @@ Route::get('/edit-user', function (){
     return view('edituserprofile');
 });
 
-=======
 Route::get('/show-users', [RegisterController::class, 'edit'])->middleware('auth')->middleware('isAdmin');
 Route::get('/edit-profile/{id}', [RegisterController::class, 'show'])->name('edit')->middleware('auth.session');
 Route::get('/edit-password/{id}', [RegisterController::class, 'show2'])->name('edit2')->middleware('auth.session');
@@ -72,4 +70,3 @@ Route::get('/edit-password/{id}', [RegisterController::class, 'show2'])->name('e
 Route::get('/editpassword', function () {
     return view('editpassword');
 });
->>>>>>> refs/remotes/origin/main

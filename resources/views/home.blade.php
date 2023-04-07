@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -70,25 +69,8 @@
         <footer>
             <img src="{{url('/image/login/Footer.png')}}"  alt="Footer">
         </footer>
-=======
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/editpassword.css') }}">
-    <script src="{{ asset('/js/script.js') }}"></script>
-    <link rel="icon" href="/image/login/icon.svg" sizes="any" type="image/svg+xml">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-    </style>
-        <title>Home • Favebook </title>
-</head>
-<body>
-
->>>>>>> refs/remotes/origin/main
 
 
-<<<<<<< HEAD
         <!-- Pop Up -->
        <section class="pop-up" id="popUp">
             <div class="wrapper-post">
@@ -123,12 +105,4 @@
        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
-=======
-    <footer>
-        <img src="image/login/Footer.png" alt="">
-    </footer>
-    <script src="script.js"></script>
-    <script src="https://kit.fontawesome.com/ca8cef09e9.js" crossorigin="anonymous"></script>
-</body>
->>>>>>> refs/remotes/origin/main
 </html>
