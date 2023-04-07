@@ -154,6 +154,8 @@ class RegisterController extends Controller
         // Update the user's profile picture path in the database
         $user->image = $filename;
         $user->save();
+
+        return back()->with('success', 'Profile picture is successfully updated');
     }
 
     return redirect()->back();

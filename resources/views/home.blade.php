@@ -25,7 +25,11 @@
                 <a href="/">
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="profile-pitcure" src="{{asset( '/storage/Barang/' .$user->image )}}" alt="">
+                            @if($user->image != NULL)
+                                <img class="profile-pitcure" src="{{asset( '/storage/Barang/' .$user->image )}}" alt="">
+                            @elseif($user->image == NULL)
+                                <img class="profile-pitcure" src="{{url('/image/login/ProfilePitcure.webp')}}" alt="Image"/>
+                            @endif
                         </a>
                         <div class="dropdown-menu dropdown-menu-right text-right" aria-labelledby="navbarDropdown">
                           <a class="dropdown-item" href="/edit-profile/{{$user->id}}"><i class="fa fa-user-edit"></i> &nbsp Edit Profile</a>
@@ -41,7 +45,11 @@
         </nav>
         <section class="wrapper-page">
             <div class="write-post">
-                <img src="{{asset( '/storage/Barang/' .$user->image )}}" alt="User-profile">
+                @if($user->image != NULL)
+                    <img class="profile-pitcure" src="{{asset( '/storage/Barang/' .$user->image )}}" alt="">
+                @elseif($user->image == NULL)
+                    <img class="profile-pitcure" src="{{url('/image/login/ProfilePitcure.webp')}}" alt="Image"/>
+                @endif
                 <input type="text" placeholder="Write your post here..." onclick="openPopUp()">
                 <img src={{url('/image/login/file-icon.png')}} alt="upload file" onclick="openPopUp()">
             </div>

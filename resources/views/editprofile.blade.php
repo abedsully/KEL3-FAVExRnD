@@ -24,10 +24,18 @@
         <a href="/">
             <div class="btn-group">
                 <button type="button" class="btn" data-toggle="dropdown">
-                    <img class="profile-pitcure" src="{{asset( '/storage/Barang/' .$user->image )}}" alt="">
+                    @if($user->image != NULL)
+                        <img class="profile-pitcure" src="{{asset( '/storage/Barang/' .$user->image )}}" alt="">
+                    @elseif($user->image == NULL)
+                        <img class="profile-pitcure" src="{{url('/image/login/ProfilePitcure.webp')}}" alt="Image"/>
+                    @endif
                 </button>
 
                 <div class="dropdown-menu dropdown-menu-right">
+                    <form action="/home/{{auth()->user()->id}}">
+                        <button type="submit" class="dropdown-item"><i class="fa fa-gauge"></i> &nbsp Return Home</button>
+                    </form>
+                    <div class="dropdown-divider"></div>
                     <form action="/logout" method="POST">
                         @csrf
                         <button type="submit" class="dropdown-item"><i class="fa fa-arrow-left"></i> &nbsp Logout</button>
@@ -68,43 +76,87 @@
         </div>
 
         <div class="right">
+            @if(session('success'))
+             <div class="alert alert-success" role="alert">
+                {{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+@endif
             <h1>Edit Profile</h1>
-            <form>
+            <form action="/edit-profile/{{ $user->id }}" method="POST">
+                @csrf
+                @method('patch')
                 <div class="name">
                     <div class="first-name">
                         <label>First Name</label>
-                        <input type="text" placeholder="Enter your First Name here" value="{{$user->firstName}}">
+                        <input type="text" placeholder="Enter your First Name here" value="{{$user->firstName}}" name="firstName" class="form-control rounded-top @error('firstName') is-invalid @enderror" value="{{ old('firstName' )}}" autofocus/>
+                        @error('firstName')
+                        <div class="invalid-feedback" style="color: red">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
 
                     <div class="last-name">
                         <label>Last Name</label>
-                        <input type="text" placeholder="Enter your First Name here" value="{{$user->lastName}}">
+                        <input type="text" placeholder="Enter your First Name here" value="{{$user->lastName}}" name="lastName" class="form-control rounded-top @error('lastName') is-invalid @enderror" value="{{ old('lastName' )}}" autofocus/>
+                        @error('lastName')
+                        <div class="invalid-feedback" style="color: red">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
                 </div>
                 <div class="email">
                     <label>Email</label>
-                    <input type="email" placeholder="Enter your email here" value="{{$user->email}}">
+                    <input type="email" placeholder="Enter your email here" value="{{$user->email}}" name="email" class="form-control rounded-top @error('email') is-invalid @enderror" value="{{ old('email' )}}" autofocus/>
+                    @error('email')
+                    <div class="invalid-feedback" style="color: red">
+                        {{ $message }}
+                    </div>
+                    @enderror
                 </div>
                 <div class="username">
                     <label>Username</label>
-                    <input type="text" placeholder = "Enter your username here" value="{{$user->username}}">
+                    <input type="text" placeholder = "Enter your username here" value="{{$user->username}}" name="username" class="form-control rounded-top @error('username') is-invalid @enderror" value="{{ old('username' )}}" autofocus/>
+                    @error('username')
+                    <div class="invalid-feedback" style="color: red">
+                        {{ $message }}
+                    </div>
+                    @enderror
                 </div>
                 <div class="birth">
                     <div class="pob">
                         <label>Place Of Birth</label>
-                        <input type="text" placeholder="Enter your place of birth" value="{{$user->place}}">
+                        <input type="text" placeholder="Enter your place of birth" value="{{$user->place}}" name="place" class="form-control rounded-top @error('place') is-invalid @enderror" value="{{ old('place' )}}" autofocus/>
+                        @error('place')
+                        <div class="invalid-feedback" style="color: red">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
                     <div class="dob">
                         <label for="">Date of Birth</label>
-                        <input type="date" value="{{$user->dob}}">
+                        <input type="date" value="{{$user->dob}}" name="dob" class="form-control rounded-top @error('dob') is-invalid @enderror" value="{{ old('dob' )}}" autofocus/>
+                        @error('dob')
+                        <div class="invalid-feedback" style="color: red">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
                 </div>
                 <div class="phone-number">
                     <label for="">Phone Number</label>
-                    <input type="tel" placeholder="+6281234567890" value="{{$user->number}}">
+                    <input type="tel" placeholder="+6281234567890" value="{{$user->number}}" name="number" class="form-control rounded-top @error('number') is-invalid @enderror" value="{{ old('number' )}}" autofocus/>
+                    @error('number')
+                    <div class="invalid-feedback" style="color: red">
+                        {{ $message }}
+                    </div>
+                    @enderror
                 </div>
                 <div id="button">
-                    <button>Save</button>
+                    <button type="submit">Save</button>
                 </div>
             </form>
 
@@ -113,12 +165,11 @@
     @endauth
 
     <footer>
-        <div class = "footer-content">
-            <img src="{{url('/image/login/Footer.png')}}" alt="">
-        </div>
+        <img src="image/login/Footer.png" alt="">
     </footer>
     <script src="https://kit.fontawesome.com/ca8cef09e9.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
 </html>
