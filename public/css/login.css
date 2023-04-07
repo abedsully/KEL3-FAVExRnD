@@ -30,9 +30,7 @@ body{
 }
 
 .center h1{
-    font-family: 'Poppins', sans-serif;
     font-size: 40px;
-    font-weight: 700;
     color: #0081C9;
     text-align: center;
     margin: 0px 0px 6px 0px;
@@ -54,14 +52,6 @@ body{
     color: #0081C9;
     font-size: 15px;
     font-weight: 600;
-}
-
-#username{
-    font-size: 14px;
-}
-
-#loginpassword{
-    font-size: 14px;
 }
 
 .usernamepass input{
@@ -98,7 +88,7 @@ body{
 
 .usernamepass .visibility i{
     position: absolute;
-    top: 276px;
+    top: 288px;
     left: 575px;
     cursor: pointer;
 }

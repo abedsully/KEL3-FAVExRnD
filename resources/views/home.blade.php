@@ -14,26 +14,16 @@
 </head>
 <body>
 
-    @auth()
-
-
 
     <form action="/logout" method="POST">
         @csrf
         <button type="submit">Logout</button>
     </form>
 
-    <a href="/edit-profile/{{auth()->user()->id}}">Edit</a>
-
-    {{auth()->user()->id}}
-
-    {{-- <a class="profile-section" href="/edit-profile/{{$user->id}}">Profile</a> --}}
-
     <footer>
         <img src="image/login/Footer.png" alt="">
     </footer>
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/ca8cef09e9.js" crossorigin="anonymous"></script>
-    @endauth
 </body>
 </html>

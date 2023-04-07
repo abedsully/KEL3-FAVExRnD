@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Popins', sans-serif;
 }
 /* Logo */
 .logo a img{
@@ -19,7 +19,7 @@ body{
     background-color: #FFFFFF;
     border-radius: 18px;
     width: 40vw;
-    height: 95vh;
+    height: 85vh;
     padding: 5vh 6vw;
     margin: 2vh 23vw 0 23vw;
     box-shadow: 0 0 16px black;
@@ -314,10 +314,4 @@ footer img{
 #register2{
     position: relative;
     display: none;
-}
-
-footer img{
-    width: 100;
-    z-index: -1;
-    bottom: 0;
 }
