@@ -38,6 +38,11 @@ Route::get('/userpage', function () {
     return view('userpage');
 });
 
+// Show Admin Dashboard
+Route::get('/admin', function () {
+    return view('admin');
+});
+
 // Show Edit Profile Page
 Route::get('/edit-profile/{id}', [RegisterController::class, 'showProfile'])->middleware('checkUserId');
 
@@ -53,7 +58,6 @@ Route::post('/edit-password/{id}', [RegisterController::class, 'updatePass'])->m
 // Edit Profile Picture
 Route::post('/update-profile-picture/{id}', [RegisterController::class, 'updateProfilePicture'])->name('update-profile-picture');
 
-
 // View Profile
 Route::get('/view-profile', function (){
     return view('viewprofile');
@@ -62,4 +66,3 @@ Route::get('/view-profile', function (){
 Route::get('/edit-user', function (){
     return view('edituserprofile');
 });
-

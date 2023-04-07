@@ -32,15 +32,12 @@ nav{
     width: 5vw;
     padding: 1vh 2vw;
 }
-
 .navbar .profile-picture img{
     width: 56px;
     height: 56px;
     border-radius: 50%;
     margin-right: 32px;
 }
-
-
 .dropdown-menu-right{
     right: 0;
     left: auto;

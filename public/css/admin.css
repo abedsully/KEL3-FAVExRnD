@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Navigation Bar */
+nav{
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    background-color: #0D2A39;
+    width: 100vw;
+    height: 12vh;
+}
+.navbar .logo{
+    display: flex;
+    justify-content: flex-start;
+    width: 15vw;
+    padding: 1.5vh 1.5vw;
+}
+.navbar .profile-picture{
+    display: flex;
+    justify-content: flex-end;
+    width: 5vw;
+    padding: 1vh 2vw;
+}
+
+.navbar .profile-picture img{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin-right: 32px;
+}
+
+
+.dropdown-menu-right{
+    right: 0;
+    left: auto;
+}
