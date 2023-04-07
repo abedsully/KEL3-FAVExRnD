@@ -25,23 +25,41 @@ class RegisterController extends Controller
             'dob' => 'required',
             'number' => 'required|numeric|starts_with:+62',
             'gender' => 'required'
+
+        ]);
+            $filename = NULL;
+            if($request->file('image') != NULL){
+                $extension = $request->file('image')->getClientOriginalExtension();
+                $filenames = $request->firstName.'_'.$extension;
+                $request->file('image')->storeAs('/public/storage/Barang', $filenames);
+
+            }
+
+
+        User::create([
+            'firstName' => $request->firstName,
+            'lastName' => $request->lastName,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'confirm' => Hash::make($request->confirm),
+            'username' => $request->username,
+            'place' => $request->place,
+            'dob' => $request->dob,
+            'number' => $request->number,
+            'gender' => $request->gender,
+            'image' => $filenames
         ]);
 
-        $validasi['password'] = bcrypt($validasi['password']);
-        $validasi['confirm'] = bcrypt($validasi['confirm']);
-        User::create($validasi);
         return redirect('/login');
     }
 
     public function showProf($id){
         $user = User::findOrFail($id);
-        $this->middleware('auth.session');
         return view('editprofile', compact('user'));
     }
 
     public function showPass($id){
         $user = User::findOrFail($id);
-        $this->middleware('auth.session');
         return view('editpassword', compact('user'));
     }
 
@@ -118,4 +136,5 @@ class RegisterController extends Controller
 
         return back()->with('success', 'Password updated successfully');
     }
+
 }
