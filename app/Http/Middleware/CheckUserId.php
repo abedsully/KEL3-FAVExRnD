@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class isAdmin
+class CheckUserId
 {
     /**
      * Handle an incoming request.
@@ -15,10 +15,11 @@ class isAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(!auth()->check() || !auth()->user()->isAdmin){
-            abort('403');
-        }
+        $userId = $request->route()->parameter('id');
 
+            if ($userId != auth()->user()->id){
+                abort(403, 'Unauthorized action.');
+            }
 
         return $next($request);
     }

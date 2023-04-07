@@ -22,18 +22,27 @@
         <a href="/">
             <img src="image/login/logo.png" id= favebook alt="favebook">
         </a>
-        <div class = "button-content">
-            <div class="login-button">
-                <a href="/login">
-                    <button class="login">Login</button>
-                </a>
-            </div>
+        @auth()
             <div class="register-button">
-                <a href="/register">
-                    <button class = "register">Register</button>
+                <a href="/home">
+                    <button class = "register">Return Home</button>
                 </a>
             </div>
-        </div>
+        @else
+            <div class = "button-content">
+                <div class="login-button">
+                    <a href="/login">
+                        <button class="login">Login</button>
+                    </a>
+                </div>
+                <div class="register-button">
+                    <a href="/register">
+                        <button class = "register">Register</button>
+                    </a>
+                </div>
+            </div>
+        @endauth
+
     </nav>
 
     <div class="center">

@@ -25,31 +25,12 @@
             </div>
             <form action="/register" method="POST">
 
-                <nav class="form" autocomplete="off" id="register1">
-                    <div class="first-last">
-                        <div class="first-name">
-                            <label for="firstName">First Name</label>
-                            <input type="text" placeholder="Enter your first name here" id="form3Example" name="firstName" class="form-control rounded-top @error('firstName') is-invalid @enderror" value="{{ old('firstName' )}}" autofocus/>
-                            @error('firstName')
-                            <div class="invalid-feedback" style="color: red">
-                                {{ $message }}
-                            </div>
-                            @enderror
-                        </div>
-                        <div class="last-name">
-                            <label for="lastName">Last Name</label>
-                            <input type="text" placeholder="Enter your last name here" id="lastName" name="lastName" class="form-control rounded-top @error('name') is-invalid @enderror" value="{{ old('lastName' )}}" autofocus/>
-                            @error('lastName')
-                            <div class="invalid-feedback" style="color: red">
-                                {{ $message }}
-                            </div>
-                            @enderror
-                        </div>
-                    </div>
-                    <div class="e-mail">
-                        <label for="emailAddress">Email</label>
-                        <input type="text" placeholder="Enter your email name here (Ex : bncc123@gmail.com)" id="emailAddress" name="email" class="form-control rounded-top @error('email') is-invalid @enderror" value="{{ old('email' )}}" autofocus/>
-                        @error('email')
+            <nav class="form" autocomplete="off" id="register1">
+                <div class="first-last">
+                    <div class="first-name">
+                        <label for="firstName">First Name</label>
+                        <input type="text" placeholder="Enter your first name here" id="form3Example" name="firstName" class="form-control rounded-top @error('firstName') is-invalid @enderror" value="{{ old('firstName' )}}" autofocus/>
+                        @error('firstName')
                         <div class="invalid-feedback" style="color: red">
                             {{ $message }}
                         </div>
@@ -68,14 +49,65 @@
                         </div>
                         @enderror
                     </div>
-                    <div class="password-confirm">
-                        <label for="confirm-pass">Confirm Password</label>
-                        <input type="password" placeholder="Enter your password here (Ex : Bncc123_)" id="confirmpass">
-                        <div class="visibility2" onclick="visible2()">
-                            <i class="fa-solid fa-eye" id="hide3"></i>
-                            <i class="fa-solid fa-eye-slash" id="hide4"></i>
-                        </div>
-                        @error('confirm')
+                </div>
+                <div class="e-mail">
+                    <label for="emailAddress">Email</label>
+                    <input type="text" placeholder="Enter your email name here (Ex : bncc123@gmail.com)" id="emailAddress" name="email" class="form-control rounded-top @error('email') is-invalid @enderror" value="{{ old('email' )}}" autofocus/>
+                    @error('email')
+                    <div class="invalid-feedback" style="color: red">
+                        {{ $message }}
+                    </div>
+                    @enderror
+                </div>
+                <div class="password">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Enter your password here (Ex : Bncc123_)" id="password" name="password" class="form-control rounded-top @error('password') is-invalid @enderror" value="{{ old('password' )}}" autofocus/>
+                    <div class="visibility" onclick="visible()">
+                        <i class="fa-solid fa-eye" id="hide1" ></i>
+                        <i class="fa-solid fa-eye-slash" id="hide2" ></i>
+                    </div>
+                    @error('lastName')
+                    <div class="invalid-feedback" style="color: red">
+                        {{ $message }}
+                    </div>
+                    @enderror
+                </div>
+                <div class="password-confirm">
+                    <label for="confirm-pass">Confirm Password</label>
+                    <input type="password" placeholder="Enter your password here (Ex : Bncc123_)" id="confirmpass" name="confirm">
+                    <div class="visibility2" onclick="visible2()">
+                        <i class="fa-solid fa-eye" id="hide3"></i>
+                        <i class="fa-solid fa-eye-slash" id="hide4"></i>
+                    </div>
+                    @error('confirm')
+                    <div class="invalid-feedback" style="color: red">
+                        {{ $message }}
+                    </div>
+                    @enderror
+                </div>
+                <div class="next" onclick="registerP2()">
+                    <button type="button">Next</button>
+                </div>
+
+            </nav>
+
+            <!-- Register II -->
+            <nav class="form2" id="register2" autocomplete="off" >
+                @csrf
+                <div class="u-name">
+                    <label for="username">Username</label>
+                    <input type="text" placeholder="Enter your username here" id="username" name="username" class="form-control rounded-top @error('username') is-invalid @enderror" value="{{ old('username' )}}" autofocus/>
+                    @error('username')
+                    <div class="invalid-feedback" style="color: red">
+                        {{ $message }}
+                    </div>
+                    @enderror
+                </div>
+                <div class="place-date">
+                    <div class="birth-place">
+                        <label for="POB">Place of Birth</label>
+                        <input type="text" placeholder="Jawa Barat" id="POB" name="place" class="form-control rounded-top @error('place') is-invalid @enderror" value="{{ old('place' )}}" autofocus/>
+                        @error('place')
                         <div class="invalid-feedback" style="color: red">
                             {{ $message }}
                         </div>
@@ -149,8 +181,14 @@
                             <button type="submit">Submit</button>
                         </div>
                     </div>
+<<<<<<< HEAD
                 </nav>
             </form>    
+=======
+                </div>
+            </nav>
+            </form>
+>>>>>>> 8295357e1168b5a8e2a43c5719fcf8d06afc1638
         </section>
         <footer>
             <img src="image/login/Footer.png" alt="">
