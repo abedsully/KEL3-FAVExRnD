@@ -24,13 +24,9 @@
                 <h1>Register</h1>
                 <p>Welcome to favebook! Let’s get started. </p>
             </div>
-<<<<<<< HEAD
             <form action="/register" method="POST">
 
             <nav class="form" autocomplete="off" id="register1">
-=======
-            <form class="form" autocomplete="off" id="register1">
->>>>>>> parent of e5b37f9 (edit : register page)
                 <div class="first-last">
                     <div class="first-name">
                         <label for="firstName">First Name</label>
@@ -75,11 +71,7 @@
                 </div>
                 <div class="password-confirm">
                     <label for="confirm-pass">Confirm Password</label>
-<<<<<<< HEAD
                     <input type="password" placeholder="Enter your password here (Ex : Bncc123_)" id="confirmpass" name="confirm">
-=======
-                    <input type="password" placeholder="Enter your password here (Ex : Bncc123_)" id="confirmpass">
->>>>>>> parent of e5b37f9 (edit : register page)
                     <div class="visibility2" onclick="visible2()">
                         <i class="fa-solid fa-eye" id="hide3"></i>
                         <i class="fa-solid fa-eye-slash" id="hide4"></i>
@@ -94,48 +86,8 @@
                     <button type="button">Next</button>
                 </div>
 
-<<<<<<< HEAD
             </nav>
 
-=======
-            </form>
-            <!-- Register II -->
-            <form class="form2" id="register2" autocomplete="off">
-                <div class="u-name">
-                    <label for="username">Username</label>
-                    <input type="text" placeholder="Enter your username here" id="username">
-                </div>
-                <div class="place-date">
-                    <div class="birth-place">
-                        <label for="POB">Place of Birth</label>
-                        <input type="text" placeholder="Jawa Barat" id="POB">
-                    </div>
-                    <div class="birth-date">
-                        <label for="DOB">Date of Birth</label>
-                        <input type="date" placeholder="DD-MM-YY" id="DOB">
-                    </div>
-                </div>
-                <div class="phone">
-                    <label for="phone-number">Phone Number</label>
-                    <input type="text" placeholder="Enter your phone number here (Ex : +62XXXXXXXXXXX)" id="phone-number">
-                </div>
-                <div class="gender">
-                    <p>Gender</p>
-                    <input type="radio" name="gender" id="female" value="female">
-                    <label for="female">Female</label>
-                    <input type="radio" name="gender" id="male" value="male" checked>
-                    <label for="male">Male</label>
-                </div>
-                <div class="back-submit">
-                    <div class="back">
-                        <button type="button" onclick="registerP1()">Back</button>
-                    </div>
-                    <div class="submit">
-                        <button type="submit">Submit</button>
-                    </div>
-                </div>
-            </nav>
->>>>>>> parent of e5b37f9 (edit : register page)
             <!-- Register II -->
             <nav class="form2" id="register2" autocomplete="off" >
                 @csrf
