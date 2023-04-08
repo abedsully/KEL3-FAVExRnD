@@ -29,7 +29,7 @@
                     @endif
                 </button>
                 <div class="dropdown-menu dropdown-menu-right">
-                    <form action="/home/{{auth()->user()->id}}">
+                    <form action="/home">
                         <button type="submit" class="dropdown-item"><i class="fa fa-gauge"></i> &nbsp Return Home</button>
                     </form>
                     <div class="dropdown-divider"></div>

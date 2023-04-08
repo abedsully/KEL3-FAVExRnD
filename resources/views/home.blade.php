@@ -20,7 +20,10 @@
 
         <nav class="navbar">
             <div class="logo">
-                <a href="/home"><img src="{{url('/image/login/logo.png')}}" alt="Company Logo"></a>
+                <a href="/home"><img src="{{url('/image/login/logo.png')}}" alt="Company Logo"></a> @foreach($postings as $posted)
+                <p style="color: white">{{ ucwords($posted->id) }}</p>
+            @endforeach
+
             </div>
             <div class="profile-picture">
                 <a href="/">
@@ -68,13 +71,15 @@
                             @elseif(auth()->user()->image == NULL)
                                 <img class="profile-pitcure" src="{{url('/image/login/ProfilePitcure.webp')}}" alt="Image" style="border-radius: 50%"/>
                             @endif
+                            @foreach($postings as $posted)
+                                <p>{{ ucwords($posted->id) }}</p>
+                            @endforeach
 
-                        <p>{{ ucwords($post->user->firstName) }}</p>
                     </div>
                     <div class="text1" id="post-2">
                         @if($post->images != NULL)
                             <div class="d-flex justify-content-center">
-                                <img src="{{asset( '/storage/Posting/' .$post->images )}}" alt="postingan">
+                                <img src="{{asset( '/storage/Posting/' .$posted->images )}}" alt="postingan">
                             </div>
                         @elseif($post->images == NULL)
                             <div class="d-flex justify-content-center">
@@ -84,12 +89,11 @@
                         <div class="dropdown-divider"></div>
                         <p class="h4 mt-3">Title: {{ $post->title }}</p>
                         <p class="h6 mt-3">Content: {{$post->content}}</p>
-                        @foreach($postings as $posted)
-            {{$posted->content}}
-            @endforeach
+
                     </div>
                 </div>
             @endforeach
+
 
 
         </section>

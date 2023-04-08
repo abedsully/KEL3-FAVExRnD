@@ -18,9 +18,8 @@ class PostsController extends Controller
 
 public function show(Request $request)
 {
-    $test = $request->content;
     // Retrieve the data for the view using the $id parameter
-    $postings = Posts::where('content', $test)->get();
+    $postings = Posts::where('id', auth()->user()->id)->get();
     $posts = Posts::where('user_id', 1)->get();
 
     $posts = $posts->reverse();
