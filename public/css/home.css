@@ -147,10 +147,13 @@ nav{
 }
 /* Pop Up */
 #popUp{
-    visibility: hidden;
-}
-.pop-up{
     position: absolute;
+    display: none;
+    top: 0%;
+}
+
+.pop-up{
+    display: flex;
     background-color: black;
     background: rgba(0, 0, 0, 0.5);
     background-blend-mode: darken;
@@ -158,25 +161,25 @@ nav{
     background-size: cover;
     height: 170vh;
     width: 100vw;
-    top: 0%;
 }
+
 .pop-up .wrapper-post{
     align-items: center;
     justify-content: center;
     border-radius: 30px;
-    width: 34vw;
+    width: 40vw;
     height: 72.5vh;
-    margin: 20vh 30vw 0 30vw;
-    padding: 2vh 3vw;
+    padding: 2vh 4vw;
+    margin: 20vh 30vw;
     background-color: white;
 }
-/* Information Profile (Name, Profile Picture) */
-.wrapper-post .info-profile{
+  /* Information Profile (Name, Profile Picture) */
+  .wrapper-post .info-profile{
     display: flex;
     width: 100%;
-    padding: 1.5vh 0;
-}
-.wrapper-post h1{
+    margin: 1vh 0 1.5vh 0;
+  }
+  .wrapper-post h1{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -184,24 +187,25 @@ nav{
     color:#0081C9;
     font-weight: 700;
     margin: 3vh 0 2vh 0;
-}
-.wrapper-post .info-profile img{
+  }
+  .wrapper-post .info-profile img{
     display: flex;
     width: 56px;
-    padding: 0 1vw 0 0;
-}
-.wrapper-post .info-profile p{
+    height: 56px;
+    margin: 0 1vw 0 0;
+  }
+  .wrapper-post .info-profile p{
     font-style: normal;
     font-weight: 700;
     font-size: 1.25rem;
-    margin: 2vh 0
-}
-/* Konten yang akan di post */
-.wrapper-post .forum{
+    margin: 1.5vh 0;
+  }
+  /* Konten yang akan di post */
+  .wrapper-post .forum{
     width: 32vw;
     height: 45vh;
-}
-.wrapper-post .forum .post-desc textarea{
+  }
+  .wrapper-post .forum .post-desc textarea{
     display: flex;
     align-items: flex-start;
     justify-content: left;
@@ -216,8 +220,8 @@ nav{
     border-radius: 15px;
     margin: 1.5vh 0 1.5vh 0;
     padding: 1.5vh 1vw;
-}
-.wrapper-post .forum .post-title input{
+  }
+  .wrapper-post .forum .post-title input{
     display: flex;
     background-color: #F1F1F1;
     color: #707070;
@@ -231,9 +235,9 @@ nav{
     border-radius: 15px;
     margin: 0.5vh 0 2vh 0;
     padding: 0 1vw;
-}
-/* Submit and choose files */
-.wrapper-post .post-btn button{
+  }
+  /* Submit and choose files */
+  .wrapper-post .post-btn button{
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
@@ -243,18 +247,18 @@ nav{
     border: none;
     margin: 1vh 0;
     background-color: #FFC93C;
-}
-.wrapper-post .post-btn button:hover{
+  }
+  .wrapper-post .post-btn button:hover{
     animation: ease-in;
     animation-duration: 2s;
     background-color:#0081C9;
     color: #F1F1F1;
-}
-.wrapper-post .post-btn{
+  }
+  .wrapper-post .post-btn{
     display: flex;
     text-align: center;
-}
-.wrapper-post .post-btn .post-file i{
+  }
+  .wrapper-post .post-btn .post-file i{
     display: flex;
     justify-content: center;
     margin: 1vh 1vw;
@@ -264,9 +268,9 @@ nav{
     padding: 0.75vh 0.5vw;
     border-radius: 48px;
     background-color: #E6E6E6;
-}
-/* footer */
-footer img{
+  }
+  /* footer */
+  footer img{
     display: flex;
     width: 100vw;
-}
+  }

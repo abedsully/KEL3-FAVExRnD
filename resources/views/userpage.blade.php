@@ -13,6 +13,10 @@
         </style>
     </head>
     <body>
+
+        @foreach($posts as $post)
+                {{$post->title}}
+            @endforeach
         <div class="background">
         <nav class="navbar">
             <div class="logo">

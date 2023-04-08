@@ -38,6 +38,10 @@ Route::get('/userpage', function () {
     return view('userpage');
 });
 
+
+
+
+
 // Show Edit Profile Page
 Route::get('/edit-profile/{id}', [RegisterController::class, 'showProfile'])->middleware('checkUserId');
 

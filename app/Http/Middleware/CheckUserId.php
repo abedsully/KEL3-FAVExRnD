@@ -17,7 +17,7 @@ class CheckUserId
     {
         $userId = $request->route()->parameter('id');
 
-            if ($userId != auth()->user()->id){
+            if ($userId != auth()->user()->id && auth()->user()->isAdmin != 1){
                 abort(403, 'Unauthorized action.');
             }
 
