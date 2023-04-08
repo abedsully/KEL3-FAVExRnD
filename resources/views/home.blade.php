@@ -87,12 +87,14 @@
             <img src="{{url('/image/login/Footer.png')}}"  alt="Footer">
         </footer>
 
-
         <!-- Pop Up -->
        <section class="pop-up" id="popUp">
             <div class="wrapper-post">
                     <h1>New Post</h1>
                     <hr>
+                    <div class="close">
+                        <i class="fa-sharp fa-solid fa-xmark" onclick="closePopUp()"></i>
+                    </div>
                 <div class="info-profile">
                     <img src="{{url('/image/home/pp.png')}}" alt="your profile picture">
                     <p>Mr. Chadest</p>
@@ -105,7 +107,7 @@
                         <textarea placeholder="What are you thinking about this time?" id="post-desc" cols="30"></textarea>
                     </div>
                     <div class="post-btn">
-                        <button type="submit" class="style-submit" onclick="closePopUp()">Post</button>
+                        <button type="submit" class="style-submit">Post</button>
                         <div class="post-file">
                             <i class="fa-solid fa-image"><input type="file"></i>
                         </div>

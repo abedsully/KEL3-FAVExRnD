@@ -168,6 +168,15 @@ nav{
   margin: 27.5vh 30vw;
   background-color: white;
 }
+.pop-up .wrapper-post .close i{
+  position: absolute;
+  right: 32.5%;
+  top: 18.5%;
+  scale: 2.0;
+}
+.pop-up .wrapper-post .post-btn .post-file i{
+  position: absolute;
+}
 /* Information Profile (Name, Profile Picture) */
 .wrapper-post .info-profile{
   display: flex;
@@ -206,7 +215,7 @@ nav{
   justify-content: left;
   background-color: #F1F1F1;
   color: #707070;
-  width: 32vw;
+  width: 30vw;
   height: 30vh;
   font-style: normal;
   font-weight: 400;
@@ -215,12 +224,13 @@ nav{
   border-radius: 15px;
   margin: 1.5vh 0 1.5vh 0;
   padding: 1.5vh 1vw;
+  resize: none;
 }
 .wrapper-post .forum .post-title input{
   display: flex;
   background-color: #F1F1F1;
   color: #707070;
-  width: 32vw;
+  width: 30vw;
   height: 6vh;
   font-style: normal;
   font-weight: 400;
