@@ -61,7 +61,7 @@ nav{
 .wrapper-page .write-post{
     display: flex;
     width: 44vw;
-    height: 10vh;
+    height: 15vh;
     margin: 4vh 3vw;
     border-radius: 15px;
     background-color: #FFFFFF;
@@ -113,6 +113,7 @@ nav{
     font-size: 1.1rem;
     font-weight: normal;
 }
+
 .wrapper-page .post-1 p{
     display: flex;
     justify-content: left;
@@ -123,12 +124,15 @@ nav{
 .wrapper-page .post-2{
     background-color: #FFFFFF;
     width: 44vw;
-    height: 67.5vh;
+    height: 80vh;
     margin: 3vh 3vw 3vh 3vw;
     border-radius: 15px;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 .wrapper-page .post-2 .informasi{
     display: flex;
+    flex-wrap: wrap;
 }
 .wrapper-page .post-2 .informasi img{
     display: flex;
@@ -143,7 +147,10 @@ nav{
     margin: 3vh 0 0 0.25vw;
 }
 .wrapper-page .post-2 img{
-    width: 44vw;
+    max-width: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* Pop Up */
 #popUp{

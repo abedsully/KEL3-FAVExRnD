@@ -22,7 +22,7 @@ class LoginController extends Controller
             $request->session()->regenerate();
             $userIds = Auth::id();
 
-            return redirect('/home/' . $userIds);
+            return redirect('/home');
         }
 
 

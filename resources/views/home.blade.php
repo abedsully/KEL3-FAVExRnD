@@ -15,22 +15,26 @@
         <title>Home • Favebook</title>
     </head>
     <body>
+        @auth
+
+
         <nav class="navbar">
             <div class="logo">
-                <a href="/home/{{$user->id}}"><img src="{{url('/image/login/logo.png')}}" alt="Company Logo"></a>
+                <a href="/home"><img src="{{url('/image/login/logo.png')}}" alt="Company Logo"></a>
             </div>
             <div class="profile-picture">
                 <a href="/">
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            @if($user->image != NULL)
-                                <img class="profile-pitcure" src="{{asset( '/storage/Barang/' .$user->image )}}" alt="">
-                            @elseif($user->image == NULL)
+                            @if(auth()->user()->image != NULL)
+                                <img class="profile-pitcure" src="{{asset( '/storage/Barang/' .auth()->user()->image )}}" alt="">
+                            @elseif(auth()->user()->image == NULL)
                                 <img class="profile-pitcure" src="{{url('/image/login/ProfilePitcure.webp')}}" alt="Image"/>
                             @endif
                         </a>
                         <div class="dropdown-menu dropdown-menu-right text-right" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="/edit-profile/{{$user->id}}"><i class="fa fa-user-edit"></i> &nbsp Edit Profile</a>
+                          <a class="dropdown-item" href="/edit-profile/{{
+                            auth()->user()->id}}"><i class="fa fa-user-edit"></i> &nbsp Edit Profile</a>
                           <div class="dropdown-divider"></div>
                           <form action="/logout" method="POST">
                             @csrf
@@ -41,28 +45,51 @@
                 </a>
             </div>
         </nav>
+
+
         <section class="wrapper-page">
             <div class="write-post">
-                @if($user->image != NULL)
-                    <img class="profile-pitcure" src="{{asset( '/storage/Barang/' .$user->image )}}" alt="">
-                @elseif($user->image == NULL)
-                    <img class="profile-pitcure" src="{{url('/image/login/ProfilePitcure.webp')}}" alt="Image"/>
-                @endif
+                @if(auth()->user()->image != NULL)
+                                <img class="profile-pitcure" src="{{asset( '/storage/Barang/' .auth()->user()->image )}}" alt="">
+                            @elseif(auth()->user()->image == NULL)
+                                <img class="profile-pitcure" src="{{url('/image/login/ProfilePitcure.webp')}}" alt="Image"/>
+                            @endif
                 <input type="text" placeholder="Write your post here..." onclick="openPopUp()">
                 <img src="{{url('/image/login/file-icon.png')}}" alt="upload file" onclick="openPopUp()">
             </div>
 
+            @foreach ($posts as $post)
 
 
                 <div class="post-2">
                     <div class="informasi">
-                        <p>GNUguru</p>
+                        @if(auth()->user()->image != NULL)
+                                <img class="profile-pitcure" src="{{asset( '/storage/Barang/' .auth()->user()->image )}}" alt="" style="border-radius: 50%">
+                            @elseif(auth()->user()->image == NULL)
+                                <img class="profile-pitcure" src="{{url('/image/login/ProfilePitcure.webp')}}" alt="Image" style="border-radius: 50%"/>
+                            @endif
+
+                        <p>{{ ucwords($post->user->firstName) }}</p>
                     </div>
                     <div class="text1" id="post-2">
-                        <hr>
-                        <img src="{{url('image/home/Posted.png')}}" alt="postingan ">
+                        @if($post->images != NULL)
+                            <div class="d-flex justify-content-center">
+                                <img src="{{asset( '/storage/Posting/' .$post->images )}}" alt="postingan">
+                            </div>
+                        @elseif($post->images == NULL)
+                            <div class="d-flex justify-content-center">
+                                <img src="{{url('/image/login/logo.png')}}" alt="">
+                            </div>
+                        @endif
+                        <div class="dropdown-divider"></div>
+                        <p class="h4 mt-3">Title: {{ $post->title }}</p>
+                        <p class="h6 mt-3">Content: {{$post->content}}</p>
+                        @foreach($postings as $posted)
+            {{$posted->content}}
+            @endforeach
                     </div>
                 </div>
+            @endforeach
 
 
         </section>
@@ -77,14 +104,15 @@
                     <h1>New Post</h1>
                     <hr>
                 <div class="info-profile">
-                    @if($user->image != NULL)
-                    <img src="{{asset( '/storage/Barang/' .$user->image )}}" alt="" style="border-radius: 50%">
-                @elseif($user->image == NULL)
+                    @if(auth()->user()->image != NULL)
+                    <img src="{{asset( '/storage/Barang/' .
+                    auth()->user()->image )}}" alt="" style="border-radius: 50%">
+                @elseif(auth()->user()->image == NULL)
                     <img src="{{url('/image/login/ProfilePitcure.webp')}}" alt="Image" style="border-radius: 50%"/>
                 @endif
                     <p>{{ucwords(auth()->user()->username)}}</p>
                 </div>
-                <form action="/posting" method="POST" enctype="multipart/form-data">
+                <form action="/home" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="post-title">
                         <input type="text" placeholder="Write your post title here..." id="post-title" name="title" class="form-control rounded-top @error('title') is-invalid @enderror" autofocus/>
@@ -130,5 +158,6 @@
        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+       @endauth
     </body>
 </html>
