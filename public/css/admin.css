@@ -1,6 +1,15 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+/* Body background */
+body{
+    background-image: url("/image/login/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    overflow-x: hidden;
 }
 /* Navigation Bar */
 nav{
@@ -30,9 +39,179 @@ nav{
     border-radius: 50%;
     margin-right: 32px;
 }
-
-
 .dropdown-menu-right{
     right: 0;
     left: auto;
+}
+/* Wrapper */
+.post-report-wrapper{
+    width: 76vw;
+    height: 76vh;
+    padding: 2vh 2vw;
+    margin: 10vh 10vw 0 10vw;
+    border-radius: 30px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 16px black;
+}
+/* Posts border*/
+.posts, .reports{
+    display: flex;
+    width: 76vw;
+    height: 62vh;
+    border: 2px solid #E3E3E3;
+    border-radius: 8px;
+    margin: 2.5vh 0 0 0;
+}
+.posts .allpost-detail, .reports .allreports-detail{
+    display: flex;
+    width: 76vw;
+    height: 62vh;
+}
+/* Hide Reports first */
+#reports{
+    display: none;
+}
+/* All Posts */
+.posts .allpost-detail .all-post, .reports .allreports-detail .all-reports{
+    display: flex;
+    flex-direction: column;
+    width: 22vw;
+    height: 59vh;
+    border: 1px solid #E3E3E3;
+    border-radius: 8px;
+    margin: 0 2vw 0 0;
+    background-color: #FAFAFA;
+    padding: 1.5vh 1vw;
+}
+/* All Posts information */
+.posts .allpost-detail .all-post h2, .reports .allreports-detail .all-reports h2{
+    display: flex;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 550;
+    margin: 1.25vh 1.5vw;
+}
+/* Post info di All Posts */
+.posts .allpost-detail .all-post .info-1, .posts .allpost-detail .all-post .info-2, .posts .allpost-detail .all-post .info-3, .reports .allreports-detail .all-reports .info-1, .reports .allreports-detail .all-reports .info-2, .reports .allreports-detail .all-reports .info-3{
+    display: flex;
+    margin: 1.5vh 0 0 0;
+    border-radius: 8px;
+}
+.posts .allpost-detail .all-post .info-1:hover, .posts .allpost-detail .all-post .info-2:hover, .posts .allpost-detail .all-post .info-3:hover, .reports .allreports-detail .all-reports .info-1:hover, .reports .allreports-detail .all-reports .info-2:hover, .reports .allreports-detail .all-reports .info-3:hover{
+    background-color: #D9D9D9;
+}
+.posts .allpost-detail .all-post .info-1 img, .posts .allpost-detail .all-post .info-2 img, .posts .allpost-detail .all-post .info-3 img, .reports .allreports-detail .all-reports .info-1 img, .reports .allreports-detail .all-reports .info-2 img, .reports .allreports-detail .all-reports .info-3 img{
+    padding: 0.5vh 0 0.5vh 1vw;
+    display: flex;
+    width: 3vw;
+}
+.posts .allpost-detail .all-post .info-1 p, .posts .allpost-detail .all-post .info-2 p, .posts .allpost-detail .all-post .info-3 p, .reports .allreports-detail .all-reports .info-1 p, .reports .allreports-detail .all-reports .info-2 p, .reports .allreports-detail .all-reports .info-3 p{
+    display: flex;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 2.5vh 1vw;
+}
+/* Post Detail - Information */
+.reports .allreports-detail .detail-report .report-information1{
+    display: flex;
+    flex-direction: column;
+    width: 46vw;
+    height: 38vh;
+    border: 1px solid #E3E3E3;
+    border-radius: 8px;
+    margin: 1.5vh 1.5vw 1.5vh 0;
+    padding: 1vh 1vw;
+}
+.posts .allpost-detail .detail-post .post-information1 {
+    display: flex;
+    flex-direction: column;
+    width: 46vw;
+    height: 18vh;
+    border: 1px solid #E3E3E3;
+    border-radius: 8px;
+    margin: 1.5vh 1.5vw 1.5vh 0;
+    padding: 1vh 1vw;
+}
+.posts .allpost-detail .detail-post .post-information1 .info-1, .reports .allreports-detail .detail-report .report-information1 .info-1{
+    display: flex;
+    flex-direction: row;
+}
+.posts .allpost-detail .detail-post .post-information1 .info-1 .delete, .allreports-detail .detail-report .report-information1 .info-1 .delete{
+    position: absolute;
+    right: 15%;
+    margin: 1vh 0;
+    width: 2.5vw;
+}
+.posts .allpost-detail .detail-post .post-information1 .info-1 img, .allreports-detail .detail-report .report-information1 .info-1 img{
+    display: flex;
+    width: 3vw;
+    margin: 0 0 1vh 0;
+}
+.posts .allpost-detail .detail-post .post-information1 .info-1 p, .allreports-detail .detail-report .report-information1 .info-1 p{
+    display: flex;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    margin: 2.5vh 1vw;
+}
+.posts .allpost-detail .detail-post .post-information1 p, .allreports-detail .detail-report .report-information1 p{
+    display: flex;
+    text-align: justify;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 1.5vh 0.5vw;
+}
+/* No Posted */
+.posts .allpost-detail .detail-post .no-post p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: none;
+} 
+/* Title information */
+.post-report-wrapper .title{
+    display: flex;
+}
+.post-report-wrapper .title h1{
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    margin: 2vh 3vw 3.5vh 1.5vw;
+    text-decoration: none;
+    color: #A9A9A9;
+}
+/* Report page */
+.reports .allreports-detail .reporting-user .user-1{
+    display: flex;
+    background-color: #EAEAEA;
+    border-radius: 15px;
+    height: 6vh;
+    width: 46vw;
+    margin: 1.5vh 1.5vw 1.5vh 0;
+    padding: 1vh 1vw;
+}   
+.reports .allreports-detail .reporting-user .user-1 img{
+    padding: 0.5vh 0 0.5vh 0.5vw;
+    display: flex;
+    width: 3vw;
+}
+.reports .allreports-detail .reporting-user .user-1 p{
+    display: flex;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    margin: 1.5vh 1vw;
+}
+.allreports-detail .detail-report .report-information1 h6{
+    font-size: 1rem;
+    color: #676767;
+    margin: 1vh 0;
+}
+/* Footer */
+footer img{
+    position: absolute;
+    width: 100vw;
+    background-size: cover;
+    z-index: 0;
 }

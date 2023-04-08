@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta author="Axel Christopher">
         <meta description="Pop Up Page of Favebook" content="create new post">
+        <link rel="icon" href="/image/login/icon.svg" sizes="any" type="image/svg+xml">
         {{-- Custom CSS --}}
         <link rel="stylesheet" href="{{ asset('css/home.css') }}">
         {{-- Custom JS --}}
