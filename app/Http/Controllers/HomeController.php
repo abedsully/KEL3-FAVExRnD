@@ -7,10 +7,9 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index($id){
+    public function index(){
 
-        $user = User::findOrFail($id);
-        return view('home', compact('user'));
+        return view('/home');
     }
 
 }

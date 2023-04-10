@@ -58,7 +58,7 @@ nav{
 .wrapper-page .write-post{
     display: flex;
     width: 44vw;
-    height: 10vh;
+    height: 15vh;
     margin: 4vh 3vw;
     border-radius: 15px;
     background-color: #FFFFFF;
@@ -110,6 +110,7 @@ nav{
     font-size: 1.1rem;
     font-weight: normal;
 }
+
 .wrapper-page .post-1 p{
     display: flex;
     justify-content: left;
@@ -120,12 +121,15 @@ nav{
 .wrapper-page .post-2{
     background-color: #FFFFFF;
     width: 44vw;
-    height: 67.5vh;
+    height: 80vh;
     margin: 3vh 3vw 3vh 3vw;
     border-radius: 15px;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 .wrapper-page .post-2 .informasi{
     display: flex;
+    flex-wrap: wrap;
 }
 .wrapper-page .post-2 .informasi img{
     display: flex;
@@ -139,143 +143,138 @@ nav{
     font-weight: 500;
     margin: 3vh 0 0 0.25vw;
 }
-.wrapper-page .post-2 .text1 img{
-    width: 44vw;
+.wrapper-page .post-2 img{
+    max-width: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* Pop Up */
 #popUp{
-  position: absolute;
-  display: none;
-  top: 0%;
+    position: absolute;
+    display: none;
+    top: 0%;
 }
+
 .pop-up{
-  display: flex;
-  background-color: black;
-  background: rgba(0, 0, 0, 0.5);
-  background-blend-mode: darken;
-  background-position: center;
-  background-size: cover;
-  height: 170vh;
-  width: 100vw;
+    display: flex;
+    background-color: black;
+    background: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
+    height: 170vh;
+    width: 100vw;
 }
+
 .pop-up .wrapper-post{
-  align-items: center;
-  justify-content: center;
-  border-radius: 30px;
-  width: 40vw;
-  height: 72.5vh;
-  padding: 2vh 5vw;
-  margin: 27.5vh 30vw;
-  background-color: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    width: 40vw;
+    height: 72.5vh;
+    padding: 2vh 4vw;
+    margin: 20vh 30vw;
+    background-color: white;
 }
-.pop-up .wrapper-post .close i{
-  position: absolute;
-  right: 32.5%;
-  top: 18.5%;
-  scale: 2.0;
-}
-.pop-up .wrapper-post .post-btn .post-file i{
-  position: absolute;
-}
-/* Information Profile (Name, Profile Picture) */
-.wrapper-post .info-profile{
-  display: flex;
-  width: 100%;
-  margin: 1vh 0 1.5vh 0;
-}
-.wrapper-post h1{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  color:#0081C9;
-  font-weight: 700;
-  margin: 3vh 0 2vh 0;
-}
-.wrapper-post .info-profile img{
-  display: flex;
-  width: 56px;
-  height: 56px;
-  margin: 0 1vw 0 0;
-}
-.wrapper-post .info-profile p{
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1.25rem;
-  margin: 1.5vh 0;
-}
-/* Konten yang akan di post */
-.wrapper-post .forum{
-  width: 32vw;
-  height: 45vh;
-}
-.wrapper-post .forum .post-desc textarea{
-  display: flex;
-  align-items: flex-start;
-  justify-content: left;
-  background-color: #F1F1F1;
-  color: #707070;
-  width: 30vw;
-  height: 30vh;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.15rem;
-  border: none;
-  border-radius: 15px;
-  margin: 1.5vh 0 1.5vh 0;
-  padding: 1.5vh 1vw;
-  resize: none;
-}
-.wrapper-post .forum .post-title input{
-  display: flex;
-  background-color: #F1F1F1;
-  color: #707070;
-  width: 30vw;
-  height: 6vh;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.15rem;
-  text-align: justify;
-  border: none;
-  border-radius: 15px;
-  margin: 0.5vh 0 2vh 0;
-  padding: 0 1vw;
-}
-/* Submit and choose files */
-.wrapper-post .post-btn button{
-  font-style: normal;
-  font-weight: 600;
-  font-size: 15px;
-  padding: 0 13vw;
-  height: 6.5vh;
-  border-radius: 8px;
-  border: none;
-  margin: 1vh 0;
-  background-color: #FFC93C;
-}
-.wrapper-post .post-btn button:hover{
-  animation: ease-in;
-  animation-duration: 2s;
-  background-color:#0081C9;
-  color: #F1F1F1;
-}
-.wrapper-post .post-btn{
-  display: flex;
-  text-align: center;
-}
-.wrapper-post .post-btn .post-file i{
-  display: flex;
-  justify-content: center;
-  margin: 1vh 1vw;
-  width: 2vw;
-  height: 4.5vh;
-  font-size: 32px;
-  padding: 0.75vh 0.5vw;
-  border-radius: 48px;
-  background-color: #E6E6E6;
-}
-/* footer */
-footer img{
-  display: flex;
-  width: 100vw;
-}
+  /* Information Profile (Name, Profile Picture) */
+  .wrapper-post .info-profile{
+    display: flex;
+    width: 100%;
+    margin: 1vh 0 1.5vh 0;
+  }
+  .wrapper-post h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color:#0081C9;
+    font-weight: 700;
+    margin: 3vh 0 2vh 0;
+  }
+  .wrapper-post .info-profile img{
+    display: flex;
+    width: 56px;
+    height: 56px;
+    margin: 0 1vw 0 0;
+  }
+  .wrapper-post .info-profile p{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: 1.5vh 0;
+  }
+  /* Konten yang akan di post */
+  .wrapper-post .forum{
+    width: 32vw;
+    height: 45vh;
+  }
+  .wrapper-post .forum .post-desc textarea{
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    background-color: #F1F1F1;
+    color: #707070;
+    width: 32vw;
+    height: 30vh;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.15rem;
+    border: none;
+    border-radius: 15px;
+    margin: 1.5vh 0 1.5vh 0;
+    padding: 1.5vh 1vw;
+  }
+  .wrapper-post .forum .post-title input{
+    display: flex;
+    background-color: #F1F1F1;
+    color: #707070;
+    width: 32vw;
+    height: 6vh;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.15rem;
+    text-align: justify;
+    border: none;
+    border-radius: 15px;
+    margin: 0.5vh 0 2vh 0;
+    padding: 0 1vw;
+  }
+  /* Submit and choose files */
+  .wrapper-post .post-btn button{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 0 13vw;
+    height: 6.5vh;
+    border-radius: 8px;
+    border: none;
+    margin: 1vh 0;
+    background-color: #FFC93C;
+  }
+  .wrapper-post .post-btn button:hover{
+    animation: ease-in;
+    animation-duration: 2s;
+    background-color:#0081C9;
+    color: #F1F1F1;
+  }
+  .wrapper-post .post-btn{
+    display: flex;
+    text-align: center;
+  }
+  .wrapper-post .post-btn .post-file i{
+    display: flex;
+    justify-content: center;
+    margin: 1vh 1vw;
+    width: 2vw;
+    height: 4.5vh;
+    font-size: 32px;
+    padding: 0.75vh 0.5vw;
+    border-radius: 48px;
+    background-color: #E6E6E6;
+  }
+  /* footer */
+  footer img{
+    display: flex;
+    width: 100vw;
+  }

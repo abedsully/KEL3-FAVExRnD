@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
     <link rel="icon" href="/image/login/icon.svg" sizes="any" type="image/svg+xml">
     <script src="{{ asset('/js/script.js') }}"></script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <title>Login • Favebook</title>
     <style>

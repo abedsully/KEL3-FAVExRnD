@@ -20,9 +20,9 @@ class LoginController extends Controller
 
         if(Auth::attempt($user)){
             $request->session()->regenerate();
-            $userId = Auth::id();
+            $userIds = Auth::id();
 
-            return redirect('/home/' . $userId);
+            return redirect('/home');
         }
 
 

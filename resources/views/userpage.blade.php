@@ -13,9 +13,39 @@
         </style>
     </head>
     <body>
-            <nav class="navbar">
-                <div class="logo">
-                    <a href="/"><img src="image/login/logo.png" alt="Company Logo"></a>
+
+        @foreach($posts as $post)
+                {{$post->title}}
+            @endforeach
+        <div class="background">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="image/login/logo.png" alt="Company Logo">
+            </div>
+            <div class="profile-picture">
+                <img src="assets/pp.png" alt="Profile Picture">
+            </div>
+        </nav>
+        <section class="user-profile">
+            <div class="pp">
+                <img src="assets/pp2.png" alt="User Profile Picture">
+            </div>
+            <div class="user-info">
+                <h2>Mr. Chadest</h2>
+                <p>10 post</p>
+                <form action="editprofile##" class="style-button">
+                    <button type="submit"><i class="fa-solid fa-pen"></i>Edit profile</button>
+                </form>
+            </div>
+        </section>
+        <section class="my-post">
+            <div class="my-postingan">
+                <h3>My Posts</h3>
+                <hr>
+            </div>
+            <div class="post-wrapper">
+                <div class="wrapper1">
+
                 </div>
                 <div class="profile-picture">
                     <img src="image/userpage/pp.png" alt="Profile Picture">

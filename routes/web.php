@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PostsController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
@@ -38,10 +39,16 @@ Route::get('/userpage', function () {
     return view('userpage');
 });
 
-// Show Admin Dashboard
-Route::get('/admin', function () {
-    return view('admin');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/home', [App\Http\Controllers\PostsController::class, 'show']);
+    Route::post('/home', [App\Http\Controllers\PostsController::class, 'store'])->name('homeman');
 });
+
+// Route::get('/home/{id}', [PostsController::class, 'create'])->middleware('auth');
+// Route::post('/posting', [PostsController::class, 'store'])->middleware('auth');
+// Route::get('/home/{id}', [PostsController::class, 'show'])->middleware('auth');
+
+
 
 // Show Edit Profile Page
 Route::get('/edit-profile/{id}', [RegisterController::class, 'showProfile'])->middleware('checkUserId');

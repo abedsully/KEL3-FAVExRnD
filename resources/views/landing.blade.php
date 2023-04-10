@@ -18,13 +18,15 @@
 </head>
 <body>
 
+
+
     <nav class="nav-bar">
         <a href="/">
             <img src="image/login/logo.png" id= favebook alt="favebook">
         </a>
         @auth()
             <div class="register-button">
-                <a href="/home/{{auth()->user()->id}}">
+                <a href="/home">
                     <button class = "register">Return Home</button>
                 </a>
             </div>
